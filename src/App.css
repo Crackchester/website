@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .App {
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
 }
 
-.App-header {
+header {
   background-color: #000000;
-  min-height: 20vh;
+  min-height: 40vh;
   min-width: 80vw;
   display: flex;
   flex-direction: column;
@@ -16,24 +19,33 @@
   color: white;
 }
 
-.App-nav {
-  background-color: #827DE5;
-  min-width: 20vw;
+nav {
+  background-color: #472270;
+  min-width: 100vw;
+  max-height: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-nav li {
+nav ul{
+  display: flex;
+  flex-direction: row;
+}
+
+nav li {
+  padding: 2vw;
   color: #ffffff;
   list-style: none;
   align-items: left;
 }
 
-.App-nav a{
+nav a{
   text-decoration: none;
+  color: #000;
 }
 
 @keyframes App-logo-spin {
