@@ -7,7 +7,7 @@ function Announcements() {
         return (
             announcements.map((ancmt, index)=>{
                 return (
-                    <Announcement announcement={ancmt}/>
+                    <Announcement data={[ancmt, index]}/>
                 )
             })
         )

@@ -1,10 +1,11 @@
-function Announcement({announcement}) {
-    if(typeof(announcement) == "object"){
+function Announcement({data}) {
+    if(typeof(data) == "object"){
+        var announcement = data[0];
         return (
-            <div>
-                <h1>{announcement.title}</h1>
+            <div id={"Side"+data[1]%2}>
+                <h2>{announcement.title}</h2>
                 <p>{announcement.date}</p>
-                <h3>{announcement.details}</h3>
+                <p>{announcement.details}</p>
                 <br/>
             </div>
         );
