@@ -2,7 +2,7 @@
     {
         "title": "Hackershub",
         "date": "8th September 2022",
-        "images": [],
+        "images": ["./workshop-cc.png"],
         "details": "Big events with guest speakers"
     },
     {

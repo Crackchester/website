@@ -9,19 +9,22 @@ function App() {
           <li><a href="#header">Home</a></li>
           <li><a href="#AboutUs">About Us</a></li>
           <li><a href="#Events">Events</a></li>
+          <li><a href="#Podcast">Podcast</a></li>
           <li><a href="workshops">Workshops</a></li>
           <li><a href="partners">Partners</a></li>
         </ul>
       </nav>
       <header id="header">
         <br/>
-        <svg className='Logo' width={"auto"} height={"20vh"} viewBox="0 0 434 601">
+        <br/>
+        <svg className='Logo' width={"auto"} height={"40vh"} viewBox="0 0 434 601">
           <polygon class="st0" points="228.5,0.6 227.9,136.5 314.1,222.5 229,388 230.6,593.8 434,202.8 "/>
           <polygon class="st0" points="205.5,0.7 206.1,136.6 119.9,222.6 205,388.1 203.4,593.9 0,202.9 "/>
         </svg>
         <h1>CRACKCHESTER</h1>
         <p>THE UNIVERSITY OF MANCHESTER CYBER SECURITY SOCIETY</p>
         <p>OUR PARTNERS</p>
+        <br/>
       </header>
       <div id='AboutUs'>
         <br/>

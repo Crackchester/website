@@ -116,10 +116,37 @@ nav a{
 }
 
 #Events #Side0{
-  justify-content: left;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Events #Side1{
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Events #a-body{
+  display: flex;
+}
+
+#Events p{
+  padding: 2vh;
+}
+
+#Events img{
+  width: 20vh;
+}
+
+#Events li{
+  list-style: none;
 }
 
 #Podcast{
   background-color: #D83476;
   color: #F9F7F1;
+  min-height: 25vh;
 }
