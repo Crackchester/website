@@ -1,14 +1,14 @@
 [
     {
-        "title": "Hackershub",
-        "date": "8th September 2022",
-        "images": ["./workshop-cc.png"],
-        "details": "Big events with guest speakers"
+        "title": "Workshop on Metasploit",
+        "date": "1st December 2022",
+        "images": ["./workshop-cc-1-12-22.png"],
+        "details": "A Workshop on the Metasploit framework for penetration testing"
     },
     {
         "title": "Workshop on Hack the Box",
         "date": "24th November 2022",
-        "images": [],
+        "images": ["./workshop-cc-24-11-22.png"],
         "details": "Big events with guest speakers"
     },
     {

@@ -105,19 +105,25 @@ nav a{
 }
 
 #AboutUs{
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   background-color: #391463;
   color: #F9F7F1;
-  clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+  clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
 }
 
 #Events{
+  padding-top: 10vh;
   background-color: #495867;
   color: #F9F7F1;
+  font-size: 1.5vw;
 }
 
 #Events #Side0{
   min-height: 15vh;
   display: flex;
+  background-color: #F9F7F1;
+  color: #0E7C7B;
   flex-direction: column;
   align-items: center;
 }
@@ -125,6 +131,8 @@ nav a{
 #Events #Side1{
   min-height: 15vh;
   display: flex;
+  background-color: #D83476;
+  color: #F9F7F1;
   flex-direction: column;
   align-items: center;
 }
@@ -138,7 +146,7 @@ nav a{
 }
 
 #Events img{
-  width: 20vh;
+  width: 20vw;
 }
 
 #Events li{
@@ -146,7 +154,8 @@ nav a{
 }
 
 #Podcast{
-  background-color: #D83476;
+  background-color: #391463;
   color: #F9F7F1;
   min-height: 25vh;
+  padding-top: 10vh;
 }

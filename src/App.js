@@ -36,7 +36,8 @@ Employer talks, CTF challenges, workshops and hacking leaderboards allow members
         <br/>
       </div>
       <div id='Events'>
-        <h1>Announcements</h1>
+        <h1>Events</h1>
+        <p>Find out what we're arranging soon!</p>
         <Announcements/>
       </div>
       <div id='Podcast'>
@@ -50,7 +51,7 @@ Employer talks, CTF challenges, workshops and hacking leaderboards allow members
       <footer>
         <h1>Footer Time</h1>
         <p>
-          Very Cool Website
+          ( ͡° ͜ʖ ͡°)
         </p>
         <br/>
       </footer>
