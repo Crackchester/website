@@ -6,7 +6,7 @@ function ImageList({ images }) {
       images.map((img, index)=>{
             return (
             <li className="image" key={index}>
-              <img src={img} alt='this'/>
+              <img src={`${process.env.PUBLIC_URL}/assets/workshops/${img}`} alt='this'/>
             </li>
             )
         })

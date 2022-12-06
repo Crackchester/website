@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+body.blur main > * {
+  filter: blur(5px) brightness(0.7);
+  transition: $transition;
+  pointer-events: none;
+  user-select: none;
+}
+
+#app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: $default-font;
+  background-color: #495867;
+}
+
+footer {
+  background-color: $footer-color;
+  color: $footer-text;
+
+  div {
+    margin: 2em;
+  }
+}

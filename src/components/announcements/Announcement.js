@@ -4,7 +4,7 @@ function Announcement({data}) {
     if(typeof(data) == "object"){
         var announcement = data[0];
         var side = data[1]%2;
-        if(side == 0){
+        if(side === 0){
             return (
                 <div id={"Side"+side}>
                     <h2>{announcement.title}</h2>

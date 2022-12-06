@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+$primary-color: #F9F7F1;
+$secondary-color: #0E7C7B;
+$tertiary-color: #495867;
+$quaternary-color: #391463;
+$quinary-color: #D83476;
+$default-font: Montserrat, sans-serif;;
+$code-font: 'Source Code Pro', monospace;
+$selection-color: #b7c9ff;
+$footer-color: #3D3E39;
+$footer-text: #f9f7f1cc;
+
+// Breakpoints
+$bp-xsmall: 600px; // 48em
+$bp-small: 768px; // 48em
+$bp-medium: 1024px; // 64em
+$bp-large: 1366px; // 85.375em
+$bp-xlarge: 1920px; // 120em
+$bp-xxlarge: 2560px; // 160em
+
+// Media Queries
+$mq-xsmall: "(min-width: #{$bp-xsmall})";
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+// Misc
+$nav-scroll-height: 70px;
+$nav-aside-color: #3D3E39;
+$transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);

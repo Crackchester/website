@@ -1,0 +1,23 @@
+@import 'scss/variables';
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  background: $primary-color;
+	font-family: $default-font;
+
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.blur {
+		overflow: hidden;
+	}
+}
+
+code {
+  font-family: $code-font;
+}
