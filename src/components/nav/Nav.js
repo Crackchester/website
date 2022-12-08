@@ -1,6 +1,6 @@
 import React from 'react';
 import Headroom from 'react-headroom';
-import NavOptions from './nav.json';
+import nav from './nav.json';
 import classNames from 'classnames';
 import './Nav.scss';
 
@@ -78,14 +78,14 @@ class Header extends React.Component {
           <div id="nav">
             <nav>
               <ol>
-                <li>
-                  <a href={`/#app`}>
+                <li className="nav-item">
+                  <a href={`/${nav[0].href}`}>
                     <div>
                       <img src={`${process.env.PUBLIC_URL}/assets/logo.svg`} alt='logo' width='40' height='40' className='logo'/>
                     </div>
                   </a>
                 </li>
-                {NavOptions.map((data, index) => {
+                {nav.map((data, index) => {
                   return (
                     <li key={index} className="nav-item">
                       <a href={`/${data.href}`}>
@@ -98,8 +98,8 @@ class Header extends React.Component {
             </nav>
           </div>
           <div id="nav-mobile" ref={this.navPanel}>
-            <div id="nav-mobile-logo">
-              <a href={`/#app`}>
+            <div id="nav-mobile-logo" className="nav-item">
+              <a href={`/${nav[0].href}`}>
                 <div>
                   <img src={`${process.env.PUBLIC_URL}/assets/logo.svg`} alt='logo' width='40' height='40' className='logo'/>
                 </div>
@@ -126,7 +126,7 @@ class Header extends React.Component {
             >
               <nav>
                 <ol>
-                  {NavOptions.map((data, index) => {
+                  {nav.map((data, index) => {
                     return (
                       <li key={index} className="nav-item">
                         <a href={`/${data.href}`} onClick={this.selected}>{data.label}</a>

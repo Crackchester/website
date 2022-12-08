@@ -8,19 +8,9 @@
     }
   ],
   "silver": [
-    {
-      "name": "BT Group",
-      "img": "bt.svg",
-      "url": "https://www.bt.com/",
-      "description": "BT Group plc is a British multinational telecommunications holding company headquartered in London, England. It has operations in around 180 countries and is the largest provider of fixed-line, broadband and mobile services in the UK, and also provides subscription television and IT services."
-    }
+
   ],
   "bronze": [
-    {
-      "name": "BT Group",
-      "img": "bt.svg",
-      "url": "https://www.bt.com/",
-      "description": "BT Group plc is a British multinational telecommunications holding company headquartered in London, England. It has operations in around 180 countries and is the largest provider of fixed-line, broadband and mobile services in the UK, and also provides subscription television and IT services."
-    }
+
   ]
 }
