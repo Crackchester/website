@@ -7,19 +7,47 @@ body.blur main > * {
   user-select: none;
 }
 
-#app {
+.app {
   text-align: center;
   display: flex;
   flex-direction: column;
   font-family: $default-font;
   background-color: #495867;
-}
 
-footer {
-  background-color: $footer-color;
-  color: $footer-text;
+  .container {
+    margin: 5vw;
+    color: $primary-color;
+  }
+  
+  p {
+    font-size: 1.25em;
+  }
 
-  div {
-    margin: 2em;
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0 0 1vh;
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  @media #{$mq-small} {
+    .container {
+      margin: 5vw 10vw;
+    }
+
+    section {
+      padding: 5vh;
+    }
+  }
+
+  section {
+    padding: 1vh;
+    color: #F9F7F1;
   }
 }

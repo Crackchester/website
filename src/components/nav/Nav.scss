@@ -4,10 +4,9 @@
   width: 100%;
   height: $nav-scroll-height;
   display: flex;
-  align-items: end;
   justify-content: center;
   flex-flow: column;
-  padding: 0 6%;
+  padding: 0 4%;
   box-sizing: border-box;
   font-weight: 800;
 
@@ -75,6 +74,7 @@
 
       a {
         padding: 10px;
+        font-size: 1.25em;
   
         &::before {
           margin-right: 5px;
@@ -91,7 +91,8 @@
 }
 
 #nav-mobile {
-  display: block;
+  display: flex;
+  width: 100%;
 
   @media #{$mq-small} {
 		display: none;
@@ -119,12 +120,25 @@
     }
   }
 
+  #nav-mobile-logo {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+
+    img {
+      float: left;
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(38deg) brightness(100%) contrast(105%);
+    }
+  }
+
   button {
+    float: right;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 15px;
     text-transform: none;
     transition-timing-function: linear;
     transition-delay: 0.15s;

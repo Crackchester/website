@@ -1,0 +1,47 @@
+{
+  "background": {
+    "color": "#F9F7F1"
+  },
+  "fps_limit": 60,
+  "fullScreen": { 
+    "enable": false,
+    "zIndex": "-1"
+  },
+  "particles": {
+    "links": {
+      "distance": 80,
+      "enable": true,
+      "color": "#0E7C7B",
+      "opacity": 1,
+      "triangles": {
+        "enable": true,
+        "opacity": 0.05,
+        "color": "#0E7C7B"
+      }
+    },
+    "move": {
+      "enable": true,
+      "speed": 1
+    },
+    "size": {
+      "value": 1
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "number": {
+      "density": {
+        "enable": true,
+        "area": 800
+      },
+      "value": 150
+    }
+  },
+  "style": {
+    "position": "absolute",
+    "height" : "100%",
+    "top": "0",
+    "left":"0"
+  },
+  "detectRetina": true
+}

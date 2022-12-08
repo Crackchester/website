@@ -6,7 +6,7 @@ function Announcement({data}) {
         var side = data[1]%2;
         if(side === 0){
             return (
-                <div id={"Side"+side}>
+                <div className={"side-"+side}>
                     <h2>{announcement.title}</h2>
                     <p>{announcement.date}</p>
                     <div id="a-body">
@@ -18,7 +18,7 @@ function Announcement({data}) {
             );
         }else{
             return (
-                <div id={"Side"+side}>
+                <div className={"side-"+side}>
                     <h2>{announcement.title}</h2>
                     <p>{announcement.date}</p>
                     <div id="a-body">

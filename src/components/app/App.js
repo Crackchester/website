@@ -1,31 +1,25 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from '../nav/Nav'
-import Home from '../home/Home'
-import Partners from '../partners/Partners'
+import Nav from '../nav/Nav';
+import Home from '../home/Home';
+import Partners from '../partners/Partners';
+import Footer from '../footer/Footer';
 import './App.scss';
 
 function App() {
   return (
-    <div id="app">
-      <Nav />
+    <div className="app">
+      <header>
+        <Nav />
+      </header>
       <main>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/partners" element={<Partners />} />
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/partners" element={<Partners />} />
+          </Routes>
+        </BrowserRouter>
       </main>
-      <footer>
-        <div>
-          <p>
-            © 2022 Crackchester
-          </p>
-          <p>
-            ( ͡° ͜ʖ ͡°)
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

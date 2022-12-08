@@ -98,40 +98,46 @@ class Header extends React.Component {
             </nav>
           </div>
           <div id="nav-mobile" ref={this.navPanel}>
-            <nav>
-              <button onClick={() => this.openNav()} type="button">
-                <div className="hamburger-box--wrapper">
-                  <div className={
-                    classNames({
-                      "hamburger-box": true, 
-                      "active": this.state.navOpen === 1,
-                    })
-                  } />
+            <div id="nav-mobile-logo">
+              <a href={`/#app`}>
+                <div>
+                  <img src={`${process.env.PUBLIC_URL}/assets/logo.svg`} alt='logo' width='40' height='40' className='logo'/>
                 </div>
-              </button>
-              
-              <aside 
-                className={
-                  classNames({
-                    "visible": this.state.navOpen === 1
-                  })
-                }
-              >
-                <nav>
-                  <ol>
-                    {NavOptions.map((data, index) => {
-                      return (
-                        <li key={index} className="nav-item">
-                          <a href={`/${data.href}`} onClick={this.selected}>{data.label}</a>
-                        </li>
-                      )
-                    })}
-                  </ol>
-                </nav>
-              </aside>
+              </a>
+            </div>
 
-              <div className="blur" />
-            </nav>
+            <button onClick={() => this.openNav()} type="button">
+              <div className="hamburger-box--wrapper">
+                <div className={
+                  classNames({
+                    "hamburger-box": true, 
+                    "active": this.state.navOpen === 1,
+                  })
+                } />
+              </div>
+            </button>
+            
+            <aside 
+              className={
+                classNames({
+                  "visible": this.state.navOpen === 1
+                })
+              }
+            >
+              <nav>
+                <ol>
+                  {NavOptions.map((data, index) => {
+                    return (
+                      <li key={index} className="nav-item">
+                        <a href={`/${data.href}`} onClick={this.selected}>{data.label}</a>
+                      </li>
+                    )
+                  })}
+                </ol>
+              </nav>
+            </aside>
+
+            <div className="blur" />
           </div>
         </div>
       </Headroom>

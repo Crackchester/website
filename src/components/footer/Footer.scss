@@ -1,0 +1,10 @@
+@import '../../scss/variables';
+
+footer {
+  background-color: $footer-color;
+  color: $footer-text;
+
+  div {
+    margin: 2em;
+  }
+}
