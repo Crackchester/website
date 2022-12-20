@@ -1,10 +1,14 @@
 @import '../../scss/variables';
 
-footer {
-  background-color: $footer-color;
-  color: $footer-text;
+#footer {
+  color: $color-text;
+  text-align: left;
 
-  div {
-    margin: 2em;
+  section {
+    background-color: $color-accent-5;
+  }
+  
+  p {
+    font-size: 1em;
   }
 }

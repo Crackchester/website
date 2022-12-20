@@ -44,12 +44,12 @@
       counter-increment: item 1;
 
       a {
-        color: $primary-color;
+        color: $color-text;
         text-decoration: none;
         transition: color 0.25s ease;
   
         &:hover {
-          color: $secondary-color;
+          color: $color-accent-1;
         }
       }
     }
@@ -142,7 +142,7 @@
     transition-timing-function: linear;
     transition-delay: 0.15s;
     transition-property: opacity, filter;
-    color: $primary-color;
+    color: $color-text;
     background: none;
     border: none;
     z-index: 10;
@@ -159,7 +159,7 @@
     padding: 50px 10px;
     width: calc(min(75vw, 400px));
     height: 100vh;
-    background-color: $tertiary-color;
+    background-color: $color-accent-2;
     visibility: hidden;
     z-index: 5;
     transform: translateX(100vw);
@@ -197,7 +197,7 @@
   width: 30px;
   height: 3px;
   border-radius: 4px;
-  background-color: $primary-color;
+  background-color: $color-bg;
   transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
   transform: rotate(0deg);
 
@@ -209,7 +209,7 @@
     right: 0;
     height: 3px;
     border-radius: 4px;
-    background-color: $primary-color;
+    background-color: $color-bg;
     transition-timing-function: ease;
     transition-delay: 0.15s;
     transition-property: transform;
@@ -250,7 +250,7 @@
 }
 
 .headroom {
-  background-color: rgba($secondary-color, 0.85);
+  background-color: rgba($color-accent-1, 0.85);
   box-shadow: 0px 4px 9px -2px #121310;
   backdrop-filter: blur(4px);
   transition: box-shadow, padding 0.25s ease-in-out; 
@@ -273,5 +273,5 @@
 
 .headroom-wrapper {
   overflow: hidden;
-  background-color: $primary-color;
+  background-color: $color-bg;
 }

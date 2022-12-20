@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-$primary-color: #F9F7F1;
-$secondary-color: #0E7C7B;
-$tertiary-color: #495867;
-$quaternary-color: #391463;
-$quinary-color: #A4104B;
-$senary-color: #cfcfcf;
-$default-font: Montserrat, sans-serif;;
-$code-font: 'Source Code Pro', monospace;
-$selection-color: #b7c9ff;
-$footer-color: #3D3E39;
-$footer-text: #f9f7f1ae;
+$color-bg: #f9f7f1;
+$color-bg-a25: rgba(249, 247, 241, 0.25);
+$color-bg-a85: rgba(249, 247, 241, 0.85);
+$color-accent-1: #0e7c7b;
+$color-accent-2: #495867;
+$color-accent-2-a90: rgba(73, 88, 103, 0.9);
+$color-accent-3: #391463;
+$color-accent-3-a90: rgba(57, 20, 99, 0.9);
+$color-accent-4: #a4104b;
+$color-accent-4-a90: rgba(164, 16, 75, 0.9);
+$color-accent-5: #3d3e39;
+$color-text: #f9f7f1;
+$color-selection: #b7c9ff;
+$color-shadow: rgba(54, 20, 0, 0.2);
+$font-default: Montserrat, sans-serif;;
+$font-code: 'Source Code Pro', monospace;
+
+$margin-container-lr-1: 10vw;
+$margin-container-lr-2: 5vw;
+$margin-container-tb: 5vh;
 
 // Breakpoints
 $bp-xsmall: 600px; // 48em

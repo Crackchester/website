@@ -11,14 +11,8 @@ body.blur main > * {
   text-align: center;
   display: flex;
   flex-direction: column;
-  font-family: $default-font;
-  background-color: #495867;
-
-  .container {
-    margin: 5vw;
-    color: $primary-color;
-  }
-  
+  font-family: $font-default;
+    
   p {
     font-size: 1.25em;
   }
@@ -36,18 +30,58 @@ body.blur main > * {
     font-size: 2em;
   }
 
-  @media #{$mq-small} {
-    .container {
-      margin: 5vw 10vw;
-    }
+  a {
+    font-weight: bold;
+    color: $color-text;
+    text-decoration: none;
+  }
 
+  @media #{$mq-small} {
     section {
       padding: 5vh;
+    }
+
+    .container {
+      margin: $margin-container-tb $margin-container-lr-1;
     }
   }
 
   section {
     padding: 1vh;
     color: #F9F7F1;
+    background-color: $color-accent-3-a90;
+  }
+
+  .container {
+    margin: $margin-container-tb $margin-container-lr-2;
+    color: $color-text;
+  }
+
+  .btn, .btn:hover {
+    box-shadow: 0 0 4px 0 $color-shadow;
+  }
+
+  .btn:hover {
+    background-color: $color-bg;
+    color: $color-accent-5;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.67em 1em;
+    color: $color-text;
+    font-family: $font-default;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid $color-text;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    transition: all .2s ease;
+    background: none;
   }
 }

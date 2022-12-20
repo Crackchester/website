@@ -1,14 +1,14 @@
 @import '../../scss/variables';
 
 #partnersTitle {
-  background-color: $quaternary-color;
+  background-color: $color-accent-3-a90;
 }
 
 #partners {
-  background-color: $primary-color;
-  
+  background-color: $color-bg-a85;
+
   .container {
-    color: $footer-color;
+    color: $color-accent-5;
   }
 
   ul {
@@ -54,7 +54,7 @@
       display: block;
 
       img {
-        max-width: 10vw;
+        max-width: 6em;
       }
     }
 

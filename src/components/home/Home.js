@@ -62,7 +62,11 @@ const Home = () => {
         <p>
         A new podcast discussing the latest trends, topic and controversies in the cybersecurity scene.
         </p>
-        <a href="https://podcast.crackchester.cc/">Link</a>
+        <a href="https://podcast.crackchester.cc/">
+          <button className="btn">
+            Click Here
+          </button>
+        </a>
       </div>
     </section>
   </React.Fragment>

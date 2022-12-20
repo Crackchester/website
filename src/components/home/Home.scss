@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: $secondary-color;
+  color: $color-accent-1;
   font-weight: bold;
 
   svg polygon {
@@ -23,7 +23,7 @@
     stroke-dasharray: 1380;
     stroke-dashoffset: 1380;
     fill: none;
-    stroke: $secondary-color;
+    stroke: $color-accent-1;
     stroke-width: 10;  
   }
 
@@ -64,54 +64,21 @@
 
 
 #about-us {
-  background-color: $quaternary-color;
+  background-color: $color-accent-3-a90;
 }
 
 #events {
-  background-color: $tertiary-color;
-
-  p {
-    padding: 2vh;
-  }
-
-  img {
-    width: 20vw;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  #a-body {
-    display: flex;
-  }
-
-  .side-0, .side-1 {
-    min-height: 15vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .side-0 {
-    background-color: $primary-color;
-    color: $secondary-color;
-  }
-
-  .side-1 {
-    background-color: $quinary-color;
-    color: $primary-color;
-  }
+  background-color: $color-accent-2-a90;
 }
 
 #podcast {
-  background-color: $quinary-color;
+  background-color: $color-accent-4-a90;
   min-height: 25vh;
 }
 
 @keyframes slideInFromLeft {
   0% {
-    color: $primary-color;
+    color: $color-text;
     transform: translateX(-100%);
   }
   100% {
@@ -121,15 +88,15 @@
 
 @keyframes slideInFromRight {
   0% {
-    color: $primary-color;
+    color: $color-text;
     transform: translateX(100%);
   }
   50% {
-    color: $primary-color;
+    color: $color-text;
     transform: translateX(100%)
   }
   100% {
-    color: $secondary-color;
+    color: $color-accent-1;
     transform: translateX(0);
   }
 }

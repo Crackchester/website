@@ -1,15 +1,17 @@
 import './Footer.scss';
 
 const Footer = () => (
-  <footer>
-    <div>
-      <p>
-        © 2022 Crackchester
-      </p>
-      <p>
-        ( ͡° ͜ʖ ͡°)
-      </p>
-    </div>
+  <footer id="footer">
+    <section>
+      <div className="container">
+        <p>
+          © 2022 Crackchester
+        </p>
+        <p>
+        This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </p>
+      </div>
+    </section>
   </footer>
 )
 

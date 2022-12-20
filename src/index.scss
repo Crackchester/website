@@ -6,8 +6,10 @@ html {
 
 body {
   margin: 0;
-  background: $primary-color;
-	font-family: $default-font;
+  background-color: $color-bg;
+  background-image: url("./assets/tile.png");
+  background-size: 12%;
+	font-family: $font-default;
 
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,6 +20,14 @@ body {
 	}
 }
 
+html, body, #root, #home {
+  height: 100%;
+}
+
+main {
+  flex: 1 0;
+}
+
 code {
-  font-family: $code-font;
+  font-family: $font-code;
 }
