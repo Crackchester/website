@@ -1,5 +1,4 @@
 import React from 'react';
-import workshops from './workshops.json';
 import './Workshops.scss';
 import Announcements from '../workshops/Announcements';
 
