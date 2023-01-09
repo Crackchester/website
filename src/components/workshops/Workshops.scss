@@ -1,12 +1,20 @@
 @import '../../scss/variables';
 
-.announcements {
+#workshopsTitle {
+  background-color: $color-accent-2-a90;
+}
+
+.workshops {
   @media #{$mq-small} {
 		padding: 0 2vw;
     border-left: 1px solid $color-text;
   }
   
-  .announcement_item {
+  .workshop_title{
+    text-align: left;
+  }
+
+  .workshop_item {
     text-align: left;
     border-top: 1px solid $color-text;
     padding: 1em 0;
@@ -24,15 +32,15 @@
     }
   }
   
-  .announcement_item:nth-child(1) {
+  .workshop_item:nth-child(1) {
     border-top: none;
   }
 
-  .announcement_item-content {
+  .workshop_item-content {
     overflow: hidden;
   }
 
-  .announcement_item-text {
+  .workshop_item-text {
     width: 75%;
 
     @media #{$mq-small} {
@@ -40,7 +48,22 @@
     }
   }
 
-  .announcement_item-img {
+  .workshop_item-btn {
+    background-color: $color-accent-2;
+    border: none;
+    color: $color-text;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+
+  .workshop_item-btn:hover {
+    background-color: $color-accent-2-a90;
+  }
+
+  .workshop_item-img {
     @media #{$mq-small} {
       width: 25%;
       float: right;
@@ -67,7 +90,7 @@
     }
   }
 
-  .announcement_item-header {
+  .workshop_item-header {
     margin-bottom: 0.67em;
   }
 }

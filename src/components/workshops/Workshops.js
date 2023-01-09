@@ -1,18 +1,18 @@
 import React from 'react';
 import './Workshops.scss';
-import Announcements from '../workshops/Announcements';
+import WorkshopsTitle from './workshopsTitle';
 
 const Workshops = () => (
   <React.Fragment>
     <section id="workshopsTitle">
       <div className="container">
         <h1>Workshops</h1>
-        <p>Are you interested in shaping cybersecurity specialists of the future? Get in touch with us and become a Crackchester partner.</p>
+        <p>Interested in seeing all our previous workshops or need a refresher? Take a look down below.</p>
       </div>
     </section>
     <section id="workshops">
       <div className="container">
-        <Announcements/>
+        <WorkshopsTitle/>
       </div>
     </section>
   </React.Fragment>
