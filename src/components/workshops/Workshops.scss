@@ -5,13 +5,20 @@
 }
 
 .workshops {
+
   @media #{$mq-small} {
 		padding: 0 2vw;
     border-left: 1px solid $color-text;
   }
   
-  .workshop_title{
+  .workshop_title {
     text-align: left;
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+  }
+
+  .workshop_title:nth-child(1) {
+    border-top: none;
   }
 
   .workshop_item {
@@ -49,18 +56,19 @@
   }
 
   .workshop_item-btn {
-    background-color: $color-accent-2;
+    background-color: $color-accent-1;
     border: none;
     color: $color-text;
-    padding: 1em 2em;
+    padding: 0.5em 1em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin-bottom: 1em;
+    border-radius: 0.3em;
   }
 
   .workshop_item-btn:hover {
-    background-color: $color-accent-2-a90;
+    background-color: $color-accent-1-a90;
   }
 
   .workshop_item-img {

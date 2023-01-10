@@ -1,5 +1,7 @@
 import Gallery from "./Gallery";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 
 const Workshop = (props) => {
   const { width } = useWindowDimensions();
@@ -43,7 +45,7 @@ const Workshop = (props) => {
               }) : <p>{props.details}</p>
           }
           <button className="workshop_item-btn" onClick={downloadWorkshop}>
-            Download Workshop as PDF
+            <h2><FontAwesomeIcon icon={faFilePdf} /></h2>Download Workshop
           </button>
         </div>
 

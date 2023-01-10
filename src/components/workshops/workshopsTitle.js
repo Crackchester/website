@@ -1,6 +1,8 @@
 import WorkshopsList from './workshopsList';
 import workshops from './workshops.json'
 import './Workshops.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaperclip } from '@fortawesome/free-solid-svg-icons'
 
 const workshopsTitle = () => {
   return (
@@ -8,7 +10,9 @@ const workshopsTitle = () => {
       {
         workshops.map((data, index) => {
           return <>
-            <h1 className="workshop_title">{data.name}</h1>
+            <div className="workshop_title">
+              <h1><FontAwesomeIcon icon={faPaperclip} /> {data.name}</h1>
+            </div>
             <WorkshopsList 
               key={index}
               content={data.content}

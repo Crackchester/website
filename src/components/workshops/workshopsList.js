@@ -3,11 +3,11 @@ import './Workshops.scss';
 
 const workshopsList = (props) => {
   return (
-    <div className='workshops'>
+    <div className="workshops">
       {
         props.content.map((data, index) => {
           return <>
-            <Workshop 
+            <Workshop
               key={index}
               title={data.title}
               date={data.date}
