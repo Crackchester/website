@@ -4,11 +4,11 @@
     "content": 
     [
       {
-        "title": "Metasploit: Part 2",
+        "title": "Metasploit 2",
         "date": "8th December 2022",
         "images": ["workshop-cc-8-12-22.png"],
-        "summary": "Bigger and better event with extra guest speakers",
-        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id. Augue ut lectus arcu bibendum. Commodo odio aenean sed adipiscing diam donec adipiscing. Metus aliquam eleifend mi in nulla posuere. Odio pellentesque diam volutpat commodo sed. Vitae tortor condimentum lacinia quis vel eros donec ac. Donec pretium vulputate sapien nec sagittis aliquam malesuada. At imperdiet dui accumsan sit amet nulla facilisi morbi. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Imperdiet massa tincidunt nunc pulvinar. Nunc mi ipsum faucibus vitae aliquet. Est lorem ipsum dolor sit. Vestibulum sed arcu non odio euismod lacinia. Diam phasellus vestibulum lorem sed.",
+        "summary": "Metasploit: Beyond the Basics",
+        "details": "The second workshop on Metasploit will build on the foundational knowledge gained in the previous session and delve deeper into advanced topics. The workshop will focus on the payload module which is used for creating the appropriate payload for a specific exploitation scenario, and for encoding and delivering the payload to the target system. The workshop will be a hands-on experience, with the participants getting the chance to practice their skills and apply what they have learned in a simulated environment. The goal of the workshop is to equip participants with the knowledge and skills needed to become proficient in using Metasploit for security testing.",
         "file": "8 - Metasploit 2.pdf"
       },
       {
