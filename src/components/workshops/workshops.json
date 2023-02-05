@@ -72,8 +72,8 @@
         "title": "Introduction To Web Vulnerabilities",
         "date": "27th October 2022",
         "images": ["workshop-cc-27-10-22.png"],
-        "summary": "Bigger and better event with extra guest speakers",
-        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id. Augue ut lectus arcu bibendum. Commodo odio aenean sed adipiscing diam donec adipiscing. Metus aliquam eleifend mi in nulla posuere. Odio pellentesque diam volutpat commodo sed. Vitae tortor condimentum lacinia quis vel eros donec ac. Donec pretium vulputate sapien nec sagittis aliquam malesuada. At imperdiet dui accumsan sit amet nulla facilisi morbi. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Imperdiet massa tincidunt nunc pulvinar. Nunc mi ipsum faucibus vitae aliquet. Est lorem ipsum dolor sit. Vestibulum sed arcu non odio euismod lacinia. Diam phasellus vestibulum lorem sed.",
+        "summary": "SQL Injection and Fuzzing",
+        "details": "This hands-on workshop will provide you with a thorough understanding of one of the most common and dangerous web security threats: SQL injection. We’ll start by learning the basics of SQL and how it is used in web applications. From there, We'll explore the various techniques used to exploit SQL injection vulnerabilities including the use of sqlmap tool. Then, we will continue with a method called fuzzing which can be used to detect hidden pages, finding admin pages, navigate to documents and much more. There are many tools that can be used for fuzzing but for this workshop we will use WFuzz.",
         "file": "3 - Intro to Web Vulnerabilities.pdf"
       }
     ]
@@ -86,8 +86,8 @@
         "title": "Introduction To Ethical Hacking",
         "date": "20th October 2022",
         "images": ["workshop-cc-20-10-22.png"],
-        "summary": "Bigger and better event with extra guest speakers",
-        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id. Augue ut lectus arcu bibendum. Commodo odio aenean sed adipiscing diam donec adipiscing. Metus aliquam eleifend mi in nulla posuere. Odio pellentesque diam volutpat commodo sed. Vitae tortor condimentum lacinia quis vel eros donec ac. Donec pretium vulputate sapien nec sagittis aliquam malesuada. At imperdiet dui accumsan sit amet nulla facilisi morbi. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Imperdiet massa tincidunt nunc pulvinar. Nunc mi ipsum faucibus vitae aliquet. Est lorem ipsum dolor sit. Vestibulum sed arcu non odio euismod lacinia. Diam phasellus vestibulum lorem sed.",
+        "summary": "Network Reconnaissance with Nmap",
+        "details": "We will start by learning the basics of ethical hacking, including its definition, principles, and the crucial differences between ethical hacking and malicious hacking. Then, we will get straight to reconnaissance and information gathering that includes passive and active network reconnaissance. We will be focusing on Nmap which is one of the most useful tools in ethical hacking. Nmap is a versatile tool that is commonly used for active network reconnaissance. Everyone is advised to have a Kali Linux VM installed to follow along with the hands-on examples that we have prepared.",
         "file": "2 - Intro to Ethical Hacking.pdf"
       }
     ]
@@ -100,8 +100,8 @@
           "title": "Introduction To Cybersecurity",
           "date": "6th October 2022",
           "images": ["workshop-cc-6-10-22.png"],
-          "summary": "Bigger and better event with extra guest speakers",
-          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tempus iaculis urna id. Augue ut lectus arcu bibendum. Commodo odio aenean sed adipiscing diam donec adipiscing. Metus aliquam eleifend mi in nulla posuere. Odio pellentesque diam volutpat commodo sed. Vitae tortor condimentum lacinia quis vel eros donec ac. Donec pretium vulputate sapien nec sagittis aliquam malesuada. At imperdiet dui accumsan sit amet nulla facilisi morbi. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Imperdiet massa tincidunt nunc pulvinar. Nunc mi ipsum faucibus vitae aliquet. Est lorem ipsum dolor sit. Vestibulum sed arcu non odio euismod lacinia. Diam phasellus vestibulum lorem sed.",
+          "summary": "Cybersecurity 101: The Basics",
+          "details": "Welcome to the first session of our comprehensive series of cybersecurity workshops! This initial session is designed to lay the foundation for your journey into the world of cybersecurity. This workshop is the first in a series of comprehensive cybersecurity workshops, designed to provide you with a comprehensive understanding of the field. Whether you are just starting your cybersecurity journey or looking to expand your knowledge, this initial session is the perfect opportunity to get a solid foundation in the basics of network security.",
           "file": "1 - Introduction to Cybersecurity.pdf"
       }
     ]
