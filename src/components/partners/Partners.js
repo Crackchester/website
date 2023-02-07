@@ -3,6 +3,7 @@ import partners from './partners.json';
 import './Partners.scss';
 
 const LANG = {
+  "platinum": "Platinum Partners",
   "gold": "Gold Partners",
   "silver": "Silver Partners",
   "bronze": "Bronze Partners"
