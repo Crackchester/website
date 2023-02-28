@@ -26,6 +26,8 @@ html, body, #root, #home {
 
 main {
   flex: 1 0;
+  display: flex;
+  flex-flow: column;
 }
 
 code {

@@ -1,0 +1,20 @@
+@import '../../scss/variables';
+
+.loader {
+  margin: 0 auto;
+  border: 0.5em solid $color-bg-a25;
+  border-top: 0.5em solid $color-text;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  animation: spin 0.5s ease-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

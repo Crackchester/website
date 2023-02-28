@@ -84,4 +84,10 @@ body.blur main > * {
     transition: all .2s ease;
     background: none;
   }
+
+  .btn:disabled {
+    color: white !important;
+    background: none !important;
+    opacity: 0.4 !important;
+  }
 }
