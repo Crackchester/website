@@ -7,8 +7,6 @@ import { Navigate } from "react-router-dom";
 const AUTH_USERNAME = "d2653ff7cbb2d8ff129ac27ef5781ce68b2558c41a74af1f2ddca635cbeef07d"
 const AUTH_PASSWORD = "f14d20f1e6b07f1162b183d34b1af77c9d578469a771b0a40de5e22a8a644143"
 
-var login;
-
 class DummyLogin extends React.Component {
   constructor(props) {
     super(props);
@@ -50,8 +48,6 @@ class DummyLogin extends React.Component {
   render() {
     // console.log(sha256(AUTH_USERNAME))
     // console.log(sha256(AUTH_PASSWORD))
-
-    const { navigation } = this.props;
 
     return (
       <React.Fragment>
