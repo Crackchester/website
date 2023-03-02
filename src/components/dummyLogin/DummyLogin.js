@@ -2,9 +2,12 @@ import React from 'react';
 import Spinner from '../spinner/Spinner';
 import { sha256 } from 'js-sha256';
 import './DummyLogin.scss';
+import { Navigate } from "react-router-dom";
 
 const AUTH_USERNAME = "d2653ff7cbb2d8ff129ac27ef5781ce68b2558c41a74af1f2ddca635cbeef07d"
 const AUTH_PASSWORD = "f14d20f1e6b07f1162b183d34b1af77c9d578469a771b0a40de5e22a8a644143"
+
+var login;
 
 class DummyLogin extends React.Component {
   constructor(props) {
@@ -13,7 +16,8 @@ class DummyLogin extends React.Component {
       username: '',
       password: '',
       loading: false,
-      notify: false
+      notify: false,
+      login: false
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,7 +29,7 @@ class DummyLogin extends React.Component {
       [event.target.name]: event.target.value
     });
   }
-
+  
   handleSubmit(event) {
     event.preventDefault();
     this.setState({ notify: false, loading: true });
@@ -33,6 +37,7 @@ class DummyLogin extends React.Component {
       this.setState({ loading: false });
       if (sha256(this.state.username.toLowerCase()) === AUTH_USERNAME && sha256(this.state.password) === AUTH_PASSWORD) {
         this.setState({ notify: "You have successfully authenticated! ( ͡° ͜ʖ ͡°)" });
+        this.setState({ login: true })
       } else {
         this.setState({ notify: "Incorrect username or password!" });
       }
@@ -46,8 +51,13 @@ class DummyLogin extends React.Component {
     // console.log(sha256(AUTH_USERNAME))
     // console.log(sha256(AUTH_PASSWORD))
 
+    const { navigation } = this.props;
+
     return (
       <React.Fragment>
+        {this.state.login && (
+          <Navigate to="/dashboard" replace={true} />
+        )}
         <section id="dummyLogin">
           <div className="container">
             <h1>Authenticate</h1>
