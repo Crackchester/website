@@ -7,6 +7,10 @@ import { Navigate } from "react-router-dom";
 const AUTH_USERNAME = "d2653ff7cbb2d8ff129ac27ef5781ce68b2558c41a74af1f2ddca635cbeef07d"
 const AUTH_PASSWORD = "f14d20f1e6b07f1162b183d34b1af77c9d578469a771b0a40de5e22a8a644143"
 
+// Fake usernames with default 1234 password
+const AUTH_DNAMES = ["b9dd960c1753459a78115d3cb845a57d924b6877e805b08bd01086ccdf34433c", "0b3659243e3eb91cd2da518ebbad79997209e1284fe70756b3e8b8bc8701ac83", "936f75b65669d11251a7d240d32cb334e2983f3c9aed61110f8ec152301b62bf", "b29e0a70e1e3d07981184c0f2f7d8543fcb87f8043f464a8349b5c6ac63b9baf", "e96e02d8e47f2a7c03be5117b3ed175c52aa30fb22028cf9c96f261563577605"]
+const AUTH_DPASS = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
+
 class DummyLogin extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +19,8 @@ class DummyLogin extends React.Component {
       password: '',
       loading: false,
       notify: false,
-      login: false
+      login: false,
+      win: false
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -34,7 +39,9 @@ class DummyLogin extends React.Component {
     setTimeout(() => {
       this.setState({ loading: false });
       if (sha256(this.state.username.toLowerCase()) === AUTH_USERNAME && sha256(this.state.password) === AUTH_PASSWORD) {
-        this.setState({ notify: "You have successfully authenticated! ( ͡° ͜ʖ ͡°)" });
+        this.setState({ notify: "You have successfully authenticated! ( ͡° ͜ʖ ͡°) You beat the challenge successfully" });
+        this.setState({ win: true })
+      }else if(AUTH_DNAMES.includes(sha256(this.state.username.toLowerCase())) && sha256(this.state.password) === AUTH_DPASS) {
         this.setState({ login: true })
       } else {
         this.setState({ notify: "Incorrect username or password!" });
@@ -53,6 +60,9 @@ class DummyLogin extends React.Component {
       <React.Fragment>
         {this.state.login && (
           <Navigate to="/dashboard" replace={true} />
+        )}
+        {this.state.win && (
+          <Navigate to="/winButThisNeedsToBeUniqueAndNotGuessable23855834543957389CyberSecLvl1000" replace={true} />
         )}
         <section id="dummyLogin">
           <div className="container">

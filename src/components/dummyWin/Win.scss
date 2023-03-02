@@ -5,7 +5,7 @@
   position: relative;
 }
 
-#dashboard {
+#win {
   position: sticky;
   padding: 5vh 0;
   min-height: 15vh;
@@ -22,7 +22,7 @@
     stroke-dasharray: 1380;
     stroke-dashoffset: 1380;
     fill: none;
-    stroke: $color-bg;
+    stroke: $color-accent-1;
     stroke-width: 10;  
   }
 
