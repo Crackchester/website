@@ -1,11 +1,18 @@
 [
     {
-        "title": "Social Engineering Workshop",
-        "date": "2nd March 2023",
+        "title": "Social Engineering Workshop 2",
+        "date": "9th March 2023",
         "images": [],
         "location": "Kilburn Building, Second Floor, Atlas 1",
-        "summary": "A Workshop on the Metasploit framework for penetration testing",
-        "details": "Hi all!!  Weekly workshops are back every Thursday, starting on the 2nd March at 4pm in Atlas 1.  We'll be starting the year off with a series on social engineering, moving away from the HTB based workshops in favour of more interactive, world-based topics.  Next week's focus will be on how hackers gain information from conversations, and how they use other social techniques to gain access to systems.  The key idea will be that even the tightest systems from a code point of view, can be exceptionally vulnerable from a social stand point."
+        "summary": "A workshop on various social engineering methods",
+        "details": "This week the cybersecurity society, Crackchester, is continuing with the social engineering workshops! Last Thursday's was extremely fun, and everyone had a great time. Woo! The next workshop will happen on Thursday at 4pm in Atlas 1, Kilburn Building. We'll be covering how hackers use social techniques to gain access to systems without huge use of software/tools, and instead get information like passwords by pretending to be someone they're not (or some other social technique). This can be person-person communication, or setting up fake man in the middle style attacks. Naturally, we're looking at how we can defend ourselves against these attacks, by spotting them and putting measures in place so these cannot happen."
+    },{
+        "title": "Lock Picking Workshop ",
+        "date": "16th March 2023",
+        "images": [],
+        "location": "Kilburn Building, Second Floor, Atlas 1",
+        "summary": "A workshop on lockpicking with an interactive demo",
+        "details": ""
     },
     {
         "title": "Hackers Hub",
