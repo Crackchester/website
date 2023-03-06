@@ -12,7 +12,7 @@ const Win = () => {
     <section id="about-us">
       <div className="container"> 
         <h2>You have successfully authenticated! ( ͡° ͜ʖ ͡°)</h2>
-        <p>The Key is CRA(GETPWND)</p>
+        <p>The Key is CRA(GETPWND2)</p>
         <p>Send This To george.goodey#5445 To Get A Prize At Next Week's Workshop </p>
         <br/>
         <br/>
