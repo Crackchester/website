@@ -15,7 +15,6 @@ const Win = (props) => {
     if(data){ key = data; }
 
   }
-  console.log(typeof(key))
   
   var bytes = CryptoJS.AES.decrypt('U2FsdGVkX18gMBDjjlQw6v7cvXIPg/ojR+Ix5At1qoU=', key);
   var decryptKey = "(You need to log in to view the code)"

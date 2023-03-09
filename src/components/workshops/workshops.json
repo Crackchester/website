@@ -10,6 +10,14 @@
         "summary": "A workshop going through Social Engineering from basics",
         "details": "This workshop aims to teach participants the basics of social engineering and provide information on the DISC model. Social engineering is the art of manipulating people to disclose sensitive information or perform actions that they wouldn't ordinarily do. The workshop discussed various techniques used in social engineering such as OSINT, Pretexting, and Reporting. The workshop also provided information on the DISC model, which is a behavioral assessment tool that helps individuals understand their personality traits and how to communicate effectively with others.",
         "file": "9 - Social Engineering.pdf"
+      },
+      {
+        "title": "Social Engineering 2",
+        "date": "9th March 2023",
+        "images": ["workshop-cc-9-3-23.png"],
+        "summary": "A workshop going through the physcial aspects of Social Engineering",
+        "details": "The workshop discusses the Social Engineering Pyramid, including the largest part, OSINT, which involves documenting and saving information related to the target, as well as pretexting, attack planning, attack launching, and reporting. The workshop also covers topics such as physical OSINT, accessing cameras, profiling through communication using the DISC method, and executing the attack plan. Finally, the importance of detailing everything done in a concise way to show the client is emphasized.",
+        "file": "10 - Social Engineering 2.pdf"
       }
     ]
   },
