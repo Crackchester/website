@@ -26,7 +26,7 @@ function App() {
             <Route path="/admin" element={<DummyLogin />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/policies" element={<Policies />} />
-            <Route path="/winButThisNeedsToBeUniqueAndNotGuessable23855834543957389CyberSecLvl1000" element={<Win />} />
+            <Route path="/win" element={<Win />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
