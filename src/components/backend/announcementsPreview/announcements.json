@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Lock Picking Workshop ",
+        "date": "16th March 2023",
+        "images": [],
+        "location": "Kilburn Building, Second Floor, Atlas 1",
+        "summary": "A workshop on lockpicking with an interactive demo",
+        "details": ""
+    },
+    {
+        "title": "Hackers Hub",
+        "date": "April 2023",
+        "images": [],
+        "location": "TBD",
+        "summary": "Our premiere event of the year. Hosting guest speakers and stands from a range of sponsors",
+        "details": "A networking conference with a ctf"
+    }
+]

@@ -1,0 +1,33 @@
+@import '../../../scss/variables';
+
+#login {
+  height: 100%;
+}
+
+form {
+  text-align: left;
+
+  label {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  input {
+    display: block;
+    font-size: 1.25em;
+    padding: 0.2em;
+    margin-bottom: 0.67em;
+    margin-top: 0.1em;
+  }
+
+  .btn {
+    font-size: 1em;
+  }
+}
+
+.flex-middle {
+  display: flex;
+  justify-content: center;
+}

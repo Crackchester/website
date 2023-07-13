@@ -1,0 +1,46 @@
+@import '../../scss/variables';
+
+.speakers {
+  @media #{$mq-small} {
+		padding: 0 2vw;
+    border-left: 1px solid $color-text;
+  }
+  
+  .speaker_item {
+    text-align: left;
+    border-top: 1px solid $color-text;
+    padding: 1em 0;
+  
+    p {
+      font-size: 1em;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  
+    time, sub {
+      font-size: 1.25em;
+    }
+  }
+  
+  .speaker_item:nth-child(1) {
+    border-top: none;
+  }
+
+  .speaker_item-content {
+    overflow: hidden;
+  }
+
+  .speaker_item-text {
+    width: 75%;
+
+    @media #{$mq-small} {
+      float: left;
+    }
+  }
+
+  .speaker_item-header {
+    margin-bottom: 0.67em;
+  }
+}

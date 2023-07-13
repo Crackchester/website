@@ -1,6 +1,5 @@
 import React from 'react';
 import Announcement from './Announcement';
-// import announcements from './announcements.json'
 import './Announcements.scss';
 
 class Announcements extends React.Component {
@@ -45,6 +44,8 @@ class Announcements extends React.Component {
               images={data.images}
               summary={data.summary}
               location={data.location}
+              id={data.id}
+              data={data}
             />
           })
         }
