@@ -21,7 +21,7 @@ class AnnouncementEdit extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(this.state.announcement)
     };
-    const url = 'http://81.158.1.128:8080/Announcements/' + this.props.data.id;
+    const url = 'https://ec2.goodey.co.uk:8443/Announcements/' + this.props.data.id;
     const response = await fetch(url, requestOptions);
     const data = await response.json();
     this.setState({ postId: data.id });

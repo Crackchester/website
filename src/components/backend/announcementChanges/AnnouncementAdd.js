@@ -28,7 +28,7 @@ class AnnouncementAdd extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(this.state.announcement)
     };
-    const response = await fetch('http://81.158.1.128:8080/Announcements', requestOptions);
+    const response = await fetch('https://ec2.goodey.co.uk:8443/Announcements', requestOptions);
     const data = await response.json();
     this.setState({ postId: data.id });
     window.location.reload();

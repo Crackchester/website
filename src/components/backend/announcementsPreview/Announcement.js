@@ -40,7 +40,7 @@ const Announcement = (props) => {
         method: 'DELETE',
         mode: 'cors'
       };
-      const url = 'http://81.158.1.128:8080/Announcements/' + id;
+      const url = 'https://ec2.goodey.co.uk:8443/Announcements/' + id;
       console.log(url)
       await fetch(url, requestOptions);
       handleDelete();
