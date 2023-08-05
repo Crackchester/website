@@ -22,7 +22,7 @@ class WorkshopEdit extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(group)
     };
-    const url = 'http://localhost:8080/Workshops/' + this.props.group.id;
+    const url = 'https://ec2.goodey.co.uk:8443/Workshops/' + this.props.group.id;
     const response = await fetch(url, requestOptions);
     const data = await response.json();
     this.setState({ putId: data.id });

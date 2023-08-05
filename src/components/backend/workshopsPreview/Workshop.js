@@ -37,7 +37,7 @@ const Workshop = (props) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(group)
       };
-      const url = 'http://localhost:8080/Workshops/' + group.id;
+      const url = 'https://ec2.goodey.co.uk:8443/Workshops/' + group.id;
       await fetch(url, requestOptions);
       window.location.reload();
     }

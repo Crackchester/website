@@ -30,7 +30,7 @@ const WorkshopsList = (props) => {
         method: 'DELETE',
         mode: 'cors'
       };
-      const url = 'http://localhost:8080/Workshops/' + id;
+      const url = 'https://ec2.goodey.co.uk:8443/Workshops/' + id;
       await fetch(url, requestOptions);
       window.location.reload();
     }

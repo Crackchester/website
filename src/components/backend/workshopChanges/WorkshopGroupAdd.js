@@ -24,7 +24,7 @@ class WorkshopAdd extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(this.state.group)
     };
-    const response = await fetch('http://localhost:8080/Workshops', requestOptions);
+    const response = await fetch('https://ec2.goodey.co.uk:8443/Workshops', requestOptions);
     const data = await response.json();
     this.setState({ postId: data.id });
     window.location.reload();
