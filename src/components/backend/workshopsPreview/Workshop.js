@@ -23,7 +23,7 @@ const Workshop = (props) => {
     setDelete(current => !current);
   };
 
-  // // For async delete requests
+  // // For async delete requests, but using put functionality
   useEffect(() => {
 
     async function sendPutRequest() {
@@ -43,7 +43,7 @@ const Workshop = (props) => {
     }
 
     if(index !== -1)sendPutRequest(index)
-  }, [index])
+  }, [index, props.group])
 
   // Code for workshop downloads
   const downloadWorkshop = () => {
