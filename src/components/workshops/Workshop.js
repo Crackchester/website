@@ -21,12 +21,40 @@ const Workshop = (props) => {
     })
   }
 
+  // Code for converting from iso to readable string
+  const d = props.date
+
+  var day = d.substring(8)
+  if(day[0] === "0"){
+    day = day.substring(1)
+  }
+  if(["1","21"].includes(day)){
+    day = day + "st"
+  }else if(["2","22"].includes(day)){
+    day = day + "nd"
+  }else if(["3","23"].includes(day)){
+    day = day + "rd"
+  }else{
+    day = day + "th"
+  }
+
+  const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+  var month = d.substring(5,7)
+  if(month[0] === "0"){
+    month = month.substring(1)
+  }
+  month = monthNames[month-1]
+  
+  const year = d.substring(0,4)
+
+  const date = day + " " + month + " " + year
+
   return (
     <div className="workshop_item">
       <div className="workshop_item-content">
         <div className="workshop_item-text" style={{width: props.images.length > 0 && width >= 768 ? '75%' : '100%'}}>
           <div className="workshop_item-header">
-            <time>{props.date}</time>
+            <time>{date}</time>
             <h2>{props.title}</h2>
           </div>
     

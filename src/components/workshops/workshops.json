@@ -5,7 +5,7 @@
     [
       {
         "title": "Social Engineering",
-        "date": "2nd March 2023",
+        "date": "2023-03-02",
         "images": ["workshop-cc-2-3-23.png"],
         "summary": "A workshop going through Social Engineering from basics",
         "details": "This workshop aims to teach participants the basics of social engineering and provide information on the DISC model. Social engineering is the art of manipulating people to disclose sensitive information or perform actions that they wouldn't ordinarily do. The workshop discussed various techniques used in social engineering such as OSINT, Pretexting, and Reporting. The workshop also provided information on the DISC model, which is a behavioral assessment tool that helps individuals understand their personality traits and how to communicate effectively with others.",
@@ -13,7 +13,7 @@
       },
       {
         "title": "Social Engineering 2",
-        "date": "9th March 2023",
+        "date": "2023-03-09",
         "images": ["workshop-cc-9-3-23.png"],
         "summary": "A workshop going through the physcial aspects of Social Engineering",
         "details": "The workshop discusses the Social Engineering Pyramid, including the largest part, OSINT, which involves documenting and saving information related to the target, as well as pretexting, attack planning, attack launching, and reporting. The workshop also covers topics such as physical OSINT, accessing cameras, profiling through communication using the DISC method, and executing the attack plan. Finally, the importance of detailing everything done in a concise way to show the client is emphasized.",
@@ -27,7 +27,7 @@
     [
       {
         "title": "Metasploit 2",
-        "date": "8th December 2022",
+        "date": "2022-12-08",
         "images": ["workshop-cc-8-12-22.png"],
         "summary": "Metasploit: Beyond the Basics",
         "details": "The second workshop on Metasploit will build on the foundational knowledge gained in the previous session and delve deeper into advanced topics. The workshop will focus on the payload module which is used for creating the appropriate payload for a specific exploitation scenario, and for encoding and delivering the payload to the target system. The workshop will be a hands-on experience, with the participants getting the chance to practice their skills and apply what they have learned in a simulated environment. The goal of the workshop is to equip participants with the knowledge and skills needed to become proficient in using Metasploit for security testing.",
@@ -35,23 +35,10 @@
       },
       {
         "title": "Introduction To Metasploit",
-        "date": "1st December 2022",
+        "date": "2022-12-01",
         "images": ["workshop-cc-1-12-22.png"],
         "summary": "The basics of using the metasploit framework including installation",
-        "details": 
-        [
-          "This workshop looked into the core metasploit modules", 
-          [
-            "Auxiliary",
-            "Exploits",
-            "Payloads",
-            "Encoders",
-            "Evasions",
-            "Post",
-            "Nops"
-          ], 
-          "And showing how to get access to them with msfconsole. It then runs through an example involving reconnaisance and enumeration"
-        ],
+        "details": "This workshop looked into the core metasploit modules: Auxiliary, Exploits, Payloads, Encoders, Evasions, Post, Nops and showing how to get access to them with msfconsole. It then runs through an example involving reconnaisance and enumeration",
         "file": "7 - Intro to Metasploit.pdf"
       }
     ]
@@ -62,7 +49,7 @@
     [
       {
         "title": "Hack the Box 3",
-        "date": "24th November 2022",
+        "date": "2022-11-24",
         "images": ["workshop-cc-24-11-22.png"],
         "summary": "This workshop looks at the final htb beginner challenges",
         "details": "This workshop finished off the series on hack the box and aims to give you the tools and experience needed to dive further in more hack the box challenges. It will also give you more general tools for your pentesting tool belt.",
@@ -70,7 +57,7 @@
       },
       {
         "title": "Hack the Box, Next Steps",
-        "date": "17th November 2022",
+        "date": "2022-11-17",
         "images": ["workshop-cc-17-11-22.png"],
         "summary": "Dive deeper into Hack The Box",
         "details": "This second workshop builds upon the previous knowledge and further presents other relevant techniques such as Structured Query Language (SQL) injection and Brute force. This session focuses on an easy tool: Gobuster, which uses brute force for network discovery. Moreover, this workshop will also explain how to set a host and share several useful commands to aid in your “hacking” process.",
@@ -78,7 +65,7 @@
       },
       {
         "title": "Introduction To Hack The Box",
-        "date": "10th November 2022",
+        "date": "2022-11-10",
         "images": ["workshop-cc-10-11-22.png"],
         "summary": "The fundamentals of Hack The Box through a Kali Linux Virtual Machine",
         "details": "This workshop introduces the Hack The Box platform, which simulates real-world security issues and vulnerabilities. A “Capture The Flag” style approach is used in your learning journey. We will explain the basics of the ‘Nmap’ tool and how it can be used efficiently to map out the internal network by identifying live hosts and performing port scanning, service enumeration, and operating system detection. At the end, you will be able to complete challenges by finding the flag.",
@@ -92,7 +79,7 @@
     [
       {
         "title": "Introduction To Web Vulnerabilities",
-        "date": "27th October 2022",
+        "date": "2022-10-27",
         "images": ["workshop-cc-27-10-22.png"],
         "summary": "SQL Injection and Fuzzing",
         "details": "This hands-on workshop will provide you with a thorough understanding of one of the most common and dangerous web security threats: SQL injection. We’ll start by learning the basics of SQL and how it is used in web applications. From there, We'll explore the various techniques used to exploit SQL injection vulnerabilities including the use of sqlmap tool. Then, we will continue with a method called fuzzing which can be used to detect hidden pages, finding admin pages, navigate to documents and much more. There are many tools that can be used for fuzzing but for this workshop we will use WFuzz.",
@@ -106,7 +93,7 @@
     [
       {
         "title": "Introduction To Ethical Hacking",
-        "date": "20th October 2022",
+        "date": "2022-10-20",
         "images": ["workshop-cc-20-10-22.png"],
         "summary": "Network Reconnaissance with Nmap",
         "details": "We will start by learning the basics of ethical hacking, including its definition, principles, and the crucial differences between ethical hacking and malicious hacking. Then, we will get straight to reconnaissance and information gathering that includes passive and active network reconnaissance. We will be focusing on Nmap which is one of the most useful tools in ethical hacking. Nmap is a versatile tool that is commonly used for active network reconnaissance. Everyone is advised to have a Kali Linux VM installed to follow along with the hands-on examples that we have prepared.",
@@ -120,7 +107,7 @@
     [
       {
           "title": "Introduction To Cybersecurity",
-          "date": "6th October 2022",
+          "date": "2022-10-06",
           "images": ["workshop-cc-6-10-22.png"],
           "summary": "Cybersecurity 101: The Basics",
           "details": "Welcome to the first session of our comprehensive series of cybersecurity workshops! This initial session is designed to lay the foundation for your journey into the world of cybersecurity. This workshop is the first in a series of comprehensive cybersecurity workshops, designed to provide you with a comprehensive understanding of the field. Whether you are just starting your cybersecurity journey or looking to expand your knowledge, this initial session is the perfect opportunity to get a solid foundation in the basics of network security.",

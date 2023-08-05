@@ -4,12 +4,10 @@ import './AnnouncementChanges.scss'
 class AnnouncementEdit extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props.data)
     this.state = {
       announcement: props.data,
       isLoading: true
     }
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }

@@ -4,14 +4,23 @@ import './Admin.scss'
 import { Navigate, useLocation } from 'react-router-dom';
 import Announcements from '../announcementsPreview/Announcements';
 import AnnouncementAdd from '../announcementChanges/AnnouncementAdd';
+import Workshops from '../workshopsPreview/WorkshopsTitle';
+import WorkshopGroupAdd from '../workshopChanges/WorkshopGroupAdd';
 
 const Admin = (props) => {
 
   // For making add announcement section appear/disappear
-  const [isActive, setIsActive] = useState(true);
+  const [isAActive, setIsAActive] = useState(true);
 
-  const handleClick = () => {
-    setIsActive(current => !current);
+  const handleAClick = () => {
+    setIsAActive(current => !current);
+  };
+
+  // For making add workshop section appear/disappear
+  const [isWActive, setIsWActive] = useState(true);
+
+  const handleWClick = () => {
+    setIsWActive(current => !current);
   };
 
   // Code for login
@@ -49,10 +58,22 @@ const Admin = (props) => {
         <h1>Events Preview</h1>
         <p>See Which Events Are displayed On The Home Page</p>
         <Announcements/>
-        <button style={{display: isActive ? 'block' : 'none'}} onClick={handleClick} className="btn">Add Announcement</button>
-        <div className="add-event" style={{display: isActive ? 'none' : 'block'}}>
+        <button style={{display: isAActive ? 'block' : 'none'}} onClick={handleAClick} className="btn">Add Announcement</button>
+        <div className="add-event" style={{display: isAActive ? 'none' : 'block'}}>
           <h2>Add Announcement</h2>
           <AnnouncementAdd/>
+        </div>
+      </div>
+    </section>
+    <section id="workshops">
+      <div className="container">
+        <h1>Workshops Preview</h1>
+        <p>See Which Workshops Are displayed On The Home Page</p>
+        <Workshops/>
+        <button style={{display: isWActive ? 'block' : 'none'}} onClick={handleWClick} className="btn">Add Workshop Group</button>
+        <div className="add-event" style={{display: isWActive ? 'none' : 'block'}}>
+          <h2>Add Workshop Group</h2>
+          <WorkshopGroupAdd/>
         </div>
       </div>
     </section>

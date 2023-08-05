@@ -17,7 +17,6 @@ const Announcement = (props) => {
     setIsActive(false);
   };
 
-  // For making deleted announcements disappear without refresh
   const [isEdited, setIsEdited] = useState(false);
 
   const handleEdit = () => {
@@ -41,7 +40,6 @@ const Announcement = (props) => {
         mode: 'cors'
       };
       const url = 'https://ec2.goodey.co.uk:8443/Announcements/' + id;
-      console.log(url)
       await fetch(url, requestOptions);
       handleDelete();
     }
