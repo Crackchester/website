@@ -15,6 +15,7 @@ class WorkshopEdit extends React.Component {
 
   async sendPutRequest() {
     this.setState({isLoading: true});
+    console.log(this.state.workshop)
     var group = this.state.group
     group.content[this.props.index] = this.state.workshop
     const requestOptions = {
@@ -67,7 +68,7 @@ class WorkshopEdit extends React.Component {
             <input type="text" name="images" maxLength={1024} onChange={this.handleChange} value={this.state.workshop.images}/>
           </label>
           <label>File
-            <input type="text" name="location" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.file}/>
+            <input type="text" name="file" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.file}/>
           </label>
           <input type="submit" value="Submit" className="btn" disabled={this.state.loading} />
         </form>
