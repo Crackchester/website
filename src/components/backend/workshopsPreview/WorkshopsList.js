@@ -58,13 +58,14 @@ const WorkshopsList = (props) => {
           </>
         })
       }
-      <button style={{display: isWActive ? 'block' : 'none'}} onClick={handleWClick} className="btn">Add Workshop Group</button>
-      <div className="add-event" style={{display: isWActive ? 'none' : 'block'}}>
+      <div className="add-workshop" style={{display: isWActive ? 'none' : 'block'}}>
         <h2>Add Workshop</h2>
         <WorkshopAdd group={props.group}/>
       </div>
-      <button style={{display: deleteOn ? 'none' : 'inline'}} onClick={()=>activateDelete()} className="btn">Delete</button>
-      <button style={{display: deleteOn ? 'inline' : 'none'}} onClick={()=>setId(props.group.id)} onMouseOut={()=>activateDelete()} className="btn">Confirm</button>
+      <button style={{display: isWActive ? 'inline-block' : 'none'}} onClick={handleWClick} className="btn">Add Workshop</button>
+      <button style={{display: isWActive ? 'none' : 'inline-block'}} onClick={handleWClick} className="btn">Cancel</button>
+      <button style={{display: deleteOn ? 'none' : 'inline-block'}} onClick={()=>activateDelete()} className="btn">Delete Group</button>
+      <button style={{display: deleteOn ? 'inline-block' : 'none'}} onClick={()=>setId(props.group.id)} onMouseOut={()=>activateDelete()} className="btn">Confirm</button>
     </div>
   )
 }

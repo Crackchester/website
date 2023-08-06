@@ -23,6 +23,12 @@ const Admin = (props) => {
     setIsWActive(current => !current);
   };
 
+  // Change to be access rights loaded from db
+  const access = ["Announcements", "Workshops"];
+
+  // For toggling between workshops/announcements
+  const [activeView, setActiveView] = useState("Announcements");
+
   // Code for login
 
   // Random hash
@@ -50,10 +56,22 @@ const Admin = (props) => {
     <section id="title-container">
       <div id="title">
         <h2>CRACKCHESTER ADMIN</h2>
-        <p><span>For Editing And Viewing</span><br/>Announcements and Workshops</p>
       </div>
     </section>
-    <section id="events">
+    <section id='admin-nav'>
+      <ol>
+        {access.map((data, index) => {
+          return (
+            <li key={index}>
+              <button onClick={()=>{setActiveView(data)}} className='btn' id={(activeView===data) ? 'selected' : ''}>
+                {data}
+              </button>
+            </li>
+          )
+        })}
+      </ol>
+    </section>
+    <section id="events" style={{display: (activeView==="Announcements") ? 'inline-block' : 'none'}}>
       <div className="container">
         <h1>Events Preview</h1>
         <p>See Which Events Are displayed On The Home Page</p>
@@ -65,13 +83,13 @@ const Admin = (props) => {
         </div>
       </div>
     </section>
-    <section id="workshops">
+    <section id="workshops" style={{display: (activeView==="Workshops") ? 'inline-block' : 'none'}}>
       <div className="container">
         <h1>Workshops Preview</h1>
         <p>See Which Workshops Are displayed On The Home Page</p>
         <Workshops/>
-        <button style={{display: isWActive ? 'block' : 'none'}} onClick={handleWClick} className="btn">Add Workshop Group</button>
-        <div className="add-event" style={{display: isWActive ? 'none' : 'block'}}>
+        <button style={{display: isWActive ? 'inline-block' : 'none'}} onClick={handleWClick} className="btn">Add Workshop Group</button>
+        <div className="add-workshop-group" style={{display: isWActive ? 'none' : 'block'}}>
           <h2>Add Workshop Group</h2>
           <WorkshopGroupAdd/>
         </div>

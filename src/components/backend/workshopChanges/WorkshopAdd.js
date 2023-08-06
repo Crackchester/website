@@ -78,7 +78,7 @@ class WorkshopAdd extends React.Component {
           <label>File
             <input type="text" name="file" maxLength={128} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit Announcement" className="btn" disabled={this.state.loading} />
+          <input type="submit" value="Submit Details" className="btn" disabled={this.state.loading} />
         </form>
       </div>
     </React.Fragment>

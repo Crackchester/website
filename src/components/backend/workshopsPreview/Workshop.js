@@ -116,14 +116,16 @@ const Workshop = (props) => {
             <button className="workshop_item-btn" onClick={downloadWorkshop}>
               <h2><FontAwesomeIcon icon={faFilePdf} /></h2>Download Workshop
             </button>
+            <div className="workshop_item-cntrls">
+              <button onClick={()=>handleEdit()} className="btn">Edit</button>
+              <button style={{display: deleteOn ? 'none' : 'inline'}} onClick={()=>activateDelete()} className="btn">Delete</button>
+              <button style={{display: deleteOn ? 'inline' : 'none'}} onClick={()=>setIndex(props.index)} onMouseOut={()=>activateDelete()} className="btn">Confirm</button>
+            </div>
           </div>
-
+          
           <div className="workshop_item-img">
             { props.images.length > 0 ? <Gallery images={props.images} /> : null }
           </div>
-          <button onClick={()=>handleEdit()} className="btn">Edit</button>
-          <button style={{display: deleteOn ? 'none' : 'inline'}} onClick={()=>activateDelete()} className="btn">Delete</button>
-          <button style={{display: deleteOn ? 'inline' : 'none'}} onClick={()=>setIndex(props.index)} onMouseOut={()=>activateDelete()} className="btn">Confirm</button>
         </div>
       </div>
       <div style={{display: isEdited ? 'block' : 'none'}}>
