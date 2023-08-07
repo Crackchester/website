@@ -36,6 +36,10 @@ const Admin = (props) => {
   }, [access]);
 
   // For toggling between workshops/announcements
+  var section = access[0]
+  if(sessionStorage.getItem("section") != null){
+    section = sessionStorage.getItem("section");
+  }
   const [activeView, setActiveView] = useState(sessionStorage.getItem("section"));
 
   // Code for login
