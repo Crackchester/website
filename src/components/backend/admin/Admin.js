@@ -1,11 +1,10 @@
-import React from 'react'
-import {useState} from 'react';
-import './Admin.scss'
+import React, { useEffect, useMemo, useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import Announcements from '../announcementsPreview/Announcements';
 import AnnouncementAdd from '../announcementChanges/AnnouncementAdd';
-import Workshops from '../workshopsPreview/WorkshopsTitle';
+import Announcements from '../announcementsPreview/Announcements';
 import WorkshopGroupAdd from '../workshopChanges/WorkshopGroupAdd';
+import Workshops from '../workshopsPreview/WorkshopsTitle';
+import './Admin.scss';
 
 const Admin = (props) => {
 
@@ -24,10 +23,20 @@ const Admin = (props) => {
   };
 
   // Change to be access rights loaded from db
-  const access = ["Announcements", "Workshops"];
+  const access = useMemo(() => ["Announcements", "Workshops"], []);
+
+  // Save currently viewed section between reloads
+  useEffect(() => {
+    window.scrollTo({ top: sessionStorage.getItem("scroll")});
+    console.log(sessionStorage.getItem("scroll"));
+    var activeViewSave = sessionStorage.getItem("section");
+    if (activeViewSave == null) {
+      activeViewSave = access[0];
+    }sessionStorage.setItem("section", activeViewSave);
+  }, [access]);
 
   // For toggling between workshops/announcements
-  const [activeView, setActiveView] = useState("Announcements");
+  const [activeView, setActiveView] = useState(sessionStorage.getItem("section"));
 
   // Code for login
 
@@ -63,7 +72,7 @@ const Admin = (props) => {
         {access.map((data, index) => {
           return (
             <li key={index}>
-              <button onClick={()=>{setActiveView(data)}} className='btn' id={(activeView===data) ? 'selected' : ''}>
+              <button onClick={()=>{setActiveView(data);sessionStorage.setItem("section", data);}} className='btn' id={(activeView===data) ? 'selected' : ''}>
                 {data}
               </button>
             </li>

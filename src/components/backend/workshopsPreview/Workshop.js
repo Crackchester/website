@@ -14,6 +14,7 @@ const Workshop = (props) => {
 
   const handleEdit = () => {
     setIsEdited(current => !current);
+    document.getElementById("editForm").reset();
   };
 
   // For confirming of delete button

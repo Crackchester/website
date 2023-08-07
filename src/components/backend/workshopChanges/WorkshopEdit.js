@@ -18,7 +18,6 @@ class WorkshopEdit extends React.Component {
 
   async sendPutRequest() {
     this.setState({isLoading: true});
-    console.log(this.state.workshop)
     var group = this.state.group
     group.content[this.props.index] = this.state.workshop
     const requestOptions = {
@@ -30,6 +29,7 @@ class WorkshopEdit extends React.Component {
     const response = await fetch(url, requestOptions);
     const data = await response.json();
     this.setState({ putId: data.id });
+    sessionStorage.setItem("scroll", window.scrollY);
     window.location.reload();
   }
 
@@ -81,7 +81,7 @@ class WorkshopEdit extends React.Component {
   render() {
     return <React.Fragment>
       <div className="flex-middle container">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} id='editForm'>
           <label>Title
             <input type="text" name="title" required minLength={3} maxLength={64} onChange={this.handleChange} value={this.state.workshop.title}/>
           </label>
