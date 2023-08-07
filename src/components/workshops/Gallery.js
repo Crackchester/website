@@ -14,7 +14,7 @@ const Gallery = (props) => {
   }, [props.images])
 
   return <CrossfadeImage 
-    src={`${process.env.PUBLIC_URL}/assets/workshops/${props.images[imgIndex]}`} 
+    src={`${props.images[imgIndex]}`} 
     style={{
       maxWidth: width >= 768 ? '90%' : '60vw', 
       maxHeight: width >= 768 ? '20vw' : '60vw', 

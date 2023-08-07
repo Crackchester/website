@@ -95,8 +95,6 @@ const Admin = (props) => {
         </div>
       </div>
     </section>
-    
-    
   </React.Fragment>
 }
 
