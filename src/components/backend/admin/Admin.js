@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import AnnouncementAdd from '../announcementChanges/AnnouncementAdd';
 import Announcements from '../announcementsPreview/Announcements';
@@ -6,7 +6,7 @@ import WorkshopGroupAdd from '../workshopChanges/WorkshopGroupAdd';
 import Workshops from '../workshopsPreview/WorkshopsTitle';
 import './Admin.scss';
 
-const Admin = (props) => {
+const Admin = () => {
 
   // For making add announcement section appear/disappear
   const [isAActive, setIsAActive] = useState(true);
@@ -22,50 +22,68 @@ const Admin = (props) => {
     setIsWActive(current => !current);
   };
 
-  // Change to be access rights loaded from db
-  const access = useMemo(() => ["Announcements", "Workshops"], []);
+  const [access, setAccess] = useState([]);
+
+  // For toggling between workshops/announcements/admin
+  const [activeView, setActiveView] = useState("");
+
+  const [loading, setLoading] = useState(true)
+
+  const [valid, setValid] = useState(false)
+
+  // Get state from previous page
+  const { state } = useLocation();
+
+  // If valid state is not found then return to login
+  if(!state){
+    setLoading(false);
+  }
+
+  // setTimeout(() => {
+  if(!valid)checkLogin(state.data[0])
+  // }, Math.max(200, Math.floor(Math.random() * 850))); 
+
+  async function checkLogin(username) {
+    const requestOptions = {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+      },
+    };
+    const url = 'https://ec2.goodey.co.uk:8443/Accounts/' + username;
+    const response = await fetch(url, requestOptions);
+    if(response.status !== 200){
+      setLoading(false)
+      return
+    }
+    const data = await response.json();
+    if(state.data[1] !== data.passhash){
+      setLoading(false)
+      return
+    }
+    setAccess(data.permissions)
+    setValid(true)
+    setLoading(false)
+  }
 
   // Save currently viewed section between reloads
-  useEffect(() => {
-    window.scrollTo({ top: sessionStorage.getItem("scroll")});
-    console.log(sessionStorage.getItem("scroll"));
+  useEffect(()=>{
     var activeViewSave = sessionStorage.getItem("section");
     if (activeViewSave == null) {
       activeViewSave = access[0];
     }sessionStorage.setItem("section", activeViewSave);
+    setActiveView(activeViewSave);
   }, [access]);
 
-  // For toggling between workshops/announcements
-  var section = access[0]
-  if(sessionStorage.getItem("section") != null){
-    section = sessionStorage.getItem("section");
-  }
-  const [activeView, setActiveView] = useState(sessionStorage.getItem("section"));
-
-  // Code for login
-
-  // Random hash
-  var key='788a576161gd58i90kgn7rtha314fs78hn39404c3d729a8b361eddb60d1b7813'
-  
-  // Get state from previous page
-  const { state } = useLocation();
-
-  // If valid state is found
-  if(state){
-
-    const { data } = state;
-
-    // If data is valid then reassign key to data
-    if(data){ key = data; }
-
-  }
-
-  // If hash has been reassigned correctly then will be false and won't be redirected back to login
-  if(!key || key !== "1d6442ddcfd9db1ff81df77cbefcd5afcc8c7ca952ab3101ede17a84b866d3f3"){
-    return <Navigate to='/login' replace={true} />
+  if (loading) {
+    return <p>Loading...</p>;
   }
 
   return <React.Fragment>
+    {!valid && (
+      <Navigate to='/login' replace={true} />
+    )}
     <section id="title-container">
       <div id="title">
         <h2>CRACKCHESTER ADMIN</h2>

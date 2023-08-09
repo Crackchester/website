@@ -20,6 +20,7 @@ class WorkshopEdit extends React.Component {
     this.setState({isLoading: true});
     var group = this.state.group
     group.content[this.props.index] = this.state.workshop
+    group.content.sort((a, b) => b.date.localeCompare(a.date));
     const requestOptions = {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
@@ -39,7 +40,6 @@ class WorkshopEdit extends React.Component {
       this.setState({
         newImage: event.target.value
       });
-      console.log(this.state.newImage)
     }else{
       var tWorkshop = this.state.workshop
       tWorkshop[targetName] = event.target.value
@@ -59,7 +59,6 @@ class WorkshopEdit extends React.Component {
   }
 
   addImage(){
-    console.log(this.state.newImage)
     if(this.state.newImage !== ""){
       let tWorkshop = this.state.workshop;
       tWorkshop.images.push(this.state.newImage);

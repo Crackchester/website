@@ -1,5 +1,7 @@
 import React from 'react'
 import './WorkshopChanges.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 class WorkshopAdd extends React.Component {
   constructor(props) {
@@ -19,6 +21,7 @@ class WorkshopAdd extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.addImage = this.addImage.bind(this);
   }
 
   async sendPutRequest() {
@@ -26,6 +29,7 @@ class WorkshopAdd extends React.Component {
     console.log(this.state.group)
     var group = this.state.group;
     group.content.push(this.state.workshop);
+    group.content.sort((a, b) => b.date.localeCompare(a.date));
     const requestOptions = {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
@@ -40,11 +44,17 @@ class WorkshopAdd extends React.Component {
 
   handleChange(event) {
     var targetName = event.target.name.toString()
-    var tWorkshop = this.state.workshop
-    tWorkshop[targetName] = event.target.value
-    this.setState({
-      workshop: tWorkshop
-    });
+    if(targetName === "newImage"){
+      this.setState({
+        newImage: event.target.value
+      });
+    }else{
+      var tWorkshop = this.state.workshop
+      tWorkshop[targetName] = event.target.value
+      this.setState({
+        workshop: tWorkshop
+      });
+    }
   }
   
   handleSubmit(event) {
@@ -54,6 +64,25 @@ class WorkshopAdd extends React.Component {
       this.sendPutRequest()
       this.setState({ loading: false });
     }, Math.max(200, Math.floor(Math.random() * 850))); 
+  }
+
+  addImage(){
+    if(this.state.newImage !== ""){
+      let tWorkshop = this.state.workshop;
+      tWorkshop.images.push(this.state.newImage);
+      this.setState({
+        workshop: tWorkshop
+      });
+    }
+  }
+
+  removeImage(img){
+    let tWorkshop = this.state.workshop;
+    let index = tWorkshop.images.indexOf(img);
+    tWorkshop.images.splice(index, 1);
+    this.setState({
+      workshop: tWorkshop
+    });
   }
 
   render() {
@@ -72,11 +101,24 @@ class WorkshopAdd extends React.Component {
           <label>Details
             <input type="text" name="details" maxLength={1024} onChange={this.handleChange} />
           </label>
-          <label>Images
-            <input type="text" name="images" maxLength={1024} onChange={this.handleChange} />
-          </label>
           <label>File
             <input type="text" name="file" maxLength={128} onChange={this.handleChange} />
+          </label>
+          <label>Images
+            {
+              this.state.workshop.images.map((img, index) => {
+                return <div key={index}>
+                  <p>{img}</p>
+                  <button className="workshop_item-del" type="button" onClick={()=>{this.removeImage(img)}}>
+                    <h2><FontAwesomeIcon icon={faTrash} /></h2>
+                  </button>
+                </div>
+              })
+            }
+            <input type="text" name="newImage" maxLength={1024} onChange={this.handleChange}/>
+            <button className="workshop_item-del" type="button" onClick={this.addImage}>
+              <h2><FontAwesomeIcon icon={faPlus} /></h2>
+            </button>
           </label>
           <input type="submit" value="Submit Details" className="btn" disabled={this.state.loading} />
         </form>

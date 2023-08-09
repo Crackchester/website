@@ -10,6 +10,7 @@ class AnnouncementEdit extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.addImage = this.addImage.bind(this);
   }
 
   async sendPostRequest() {
@@ -28,11 +29,17 @@ class AnnouncementEdit extends React.Component {
 
   handleChange(event) {
     var targetName = event.target.name.toString()
-    var tAnnouncement = this.state.announcement
-    tAnnouncement[targetName] = event.target.value
-    this.setState({
-      announcement: tAnnouncement
-    });
+    if(targetName === "newImage"){
+      this.setState({
+        newImage: event.target.value
+      });
+    }else{
+      var tAnnouncement = this.state.announcement
+      tAnnouncement[targetName] = event.target.value
+      this.setState({
+        announcement: tAnnouncement
+      });
+    }
   }
   
   handleSubmit(event) {
@@ -42,6 +49,25 @@ class AnnouncementEdit extends React.Component {
       this.sendPostRequest()
       this.setState({ loading: false });
     }, Math.max(200, Math.floor(Math.random() * 850))); 
+  }
+
+  addImage(){
+    if(this.state.newImage !== ""){
+      let tAnnouncement = this.state.announcement;
+      tAnnouncement.images.push(this.state.newImage);
+      this.setState({
+        announcement: tAnnouncement
+      });
+    }
+  }
+
+  removeImage(img){
+    let tAnnouncement = this.state.announcement;
+    let index = tAnnouncement.images.indexOf(img);
+    tAnnouncement.images.splice(index, 1);
+    this.setState({
+      announcement: tAnnouncement
+    });
   }
 
   render() {

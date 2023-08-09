@@ -1,15 +1,10 @@
 import React from 'react';
 import Spinner from '../../spinner/Spinner';
-import { sha256 } from 'js-sha256';
 import { sha3_256 } from 'js-sha3';
 import './Login.scss';
 import { Navigate } from "react-router-dom";
 
 var data;
-
-// Charlie username with default 1234 password
-const AUTH_DNAMES = ["b9dd960c1753459a78115d3cb845a57d924b6877e805b08bd01086ccdf34433c"]
-const AUTH_DPASS = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
 
 class Login extends React.Component {
   constructor(props) {
@@ -26,6 +21,24 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  async sendGetRequest(username) {
+    const requestOptions = {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        Accept: 'application/json',
+      },
+    };
+    const url = 'https://ec2.goodey.co.uk:8443/Accounts/' + username;
+    const response = await fetch(url, requestOptions);
+    const data = await response.json();
+    var passhash = ""
+    if(data.passhash){
+      passhash = data.passhash
+    }
+    this.setState({"passhash": passhash, "loading": false})
+  }
+
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
@@ -36,16 +49,13 @@ class Login extends React.Component {
     event.preventDefault();
     this.setState({ notify: false, loading: true });
     setTimeout(() => {
-      this.setState({ loading: false });
-      if (AUTH_DNAMES.includes(sha256(this.state.username.toLowerCase())) && sha256(this.state.password) === AUTH_DPASS) {
-        this.setState({ notify: "You have successfully authenticated! ( ͡° ͜ʖ ͡°) You beat the challenge successfully" });
+      this.sendGetRequest(this.state.username)
+      if ((this.state.passhash !== "") && sha3_256(this.state.password) === this.state.passhash) {
         this.setState({ login: true })
-        data = sha3_256(this.state.password);
+        data = [this.state.username, sha3_256(this.state.password)];
       }else {
         this.setState({ notify: "Incorrect username or password!" });
       }
-      console.log(sha256(this.state.username))
-      console.log(sha3_256(this.state.password))
       
     }, Math.max(200, Math.floor(Math.random() * 850))); 
   }

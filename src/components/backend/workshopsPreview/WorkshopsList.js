@@ -42,20 +42,18 @@ const WorkshopsList = (props) => {
     <div className="workshops">
       {
         props.content.map((data, index) => {
-          return <>
-            <Workshop
-              key={index}
-              title={data.title}
-              date={data.date}
-              details={data.details}
-              images={data.images}
-              summary={data.summary}
-              file={data.file}
-              data={data}
-              group={props.group}
-              index={index}
-            />
-          </>
+          return <Workshop
+            key={index}
+            title={data.title}
+            date={data.date}
+            details={data.details}
+            images={data.images}
+            summary={data.summary}
+            file={data.file}
+            data={data}
+            group={props.group}
+            index={index}
+          />
         })
       }
       <div className="add-workshop" style={{display: isWActive ? 'none' : 'block'}}>
