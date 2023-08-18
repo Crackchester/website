@@ -31,12 +31,17 @@ class Login extends React.Component {
     };
     const url = 'https://ec2.goodey.co.uk:8443/Accounts/' + username;
     const response = await fetch(url, requestOptions);
-    const data = await response.json();
+    const json = await response.json();
     var passhash = ""
-    if(data.passhash){
-      passhash = data.passhash
+    if(json.passhash){
+      passhash = json.passhash
     }
-    this.setState({"passhash": passhash, "loading": false})
+    if ((passhash !== "") && sha3_256(this.state.password) === passhash) {
+      data = [this.state.username, sha3_256(this.state.password)];
+      this.setState({ login: true, loading: false })
+    }else {
+      this.setState({ notify: "Incorrect username or password!" });
+    }
   }
 
   handleChange(event) {
@@ -61,7 +66,6 @@ class Login extends React.Component {
   }
 
   render() {
-
     return (
       <React.Fragment>
         {this.state.login && (
