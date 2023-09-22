@@ -22,7 +22,7 @@ const Home = () => {
           <polygon points="228.5,0.6 227.9,136.5 314.1,222.5 229,388 230.6,593.8 434,202.8 "/>
           <polygon points="205.5,0.7 206.1,136.6 119.9,222.6 205,388.1 203.4,593.9 0,202.9 "/>
         </svg>
-        <h1>CRACKCHESTER</h1>
+        <h1>HACKCHESTER</h1>
         <p><span>The University of Manchester</span><br/>Cyber Security Society</p>
         <p><span>Partnered With</span></p>
         <div id="landing-partners">
@@ -44,7 +44,7 @@ const Home = () => {
       <div className="container"> 
         <h1>About Us</h1>
         <p>
-        Crackchester is the University of Manchester's only ethical hacking society.  We hold weekly interactive workshops on
+        Hackchester is the University of Manchester's only ethical hacking society.  We hold weekly interactive workshops on
         cybersecurity techniques every Thursday from 4pm 'til 5pm in Atlas 1, Kilburn Building.  We explore the major
         technques employed by hackers to atack vulnerable systems, how to go about spotting vulnerabilities in your own system,
         and how to protect systems against those attacks.  We are the hosts of HackersHub, our very own cybersecurity conference, and we
@@ -54,7 +54,7 @@ const Home = () => {
         the process.  
         
         Come along.  Have fun.  Go home and practice your skills.  Come back.  Have more fun.  Do cybersecurity.
-        Join Crackchester.
+        Join Hackchester.
         </p>
       </div>
     </section>
