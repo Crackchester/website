@@ -1,9 +1,10 @@
 import Gallery from "./Gallery";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import WorkshopEdit from '../workshopChanges/WorkshopEdit';
+import AWS from 'aws-sdk';
 
 const Workshop = (props) => {
   const { width } = useWindowDimensions();
@@ -46,20 +47,46 @@ const Workshop = (props) => {
     if(index !== -1)sendPutRequest(index)
   }, [index, props.group])
 
+  const s3 = new AWS.S3({
+    accessKeyId: process.env.ACCESSKEY,
+    secretAccessKey: process.env.SECRETKEY,
+    region: 'eu-north-1'
+  });
+
+  console.log(process.env.ACCESS_KEY)
+
+  const s3params = {
+    Bucket: 'crackchester',
+    Key: `workshops/${props.file}`
+  };
+
   // Code for workshop downloads
   const downloadWorkshop = () => {
     // using Java Script method to get PDF file
-    fetch(`${process.env.PUBLIC_URL}/assets/workshops/${props.file}`).then(response => {
-        response.blob().then(blob => {
-            // Creating new object of PDF file
-            const fileURL = window.URL.createObjectURL(blob);
-            // Setting various property values
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = `${process.env.PUBLIC_URL}/assets/workshops/${props.file}`;
-            alink.click();
-        })
-    })
+    // fetch(`${props.file}`).then(response => {
+    //     response.blob().then(blob => {
+    //         // Creating new object of PDF file
+    //         const fileURL = window.URL.createObjectURL(blob);
+    //         // Setting various property values
+            // let alink = document.createElement('a');
+            // alink.href = fileURL;
+            // alink.download = `${props.file}`;
+            // alink.click();
+    //     })
+    // })
+
+    s3.getObject(s3params, (err, data) => {
+      if (err) {
+        console.log(err);
+      }
+  
+      const content = data.Body;
+      let alink = document.createElement('a');
+      alink.href = props.file;
+      alink.target= '_blank';
+      alink.download = content;
+      alink.click();
+    });
   }
 
   // Code for converting from iso to readable string
