@@ -46,12 +46,10 @@ const Workshop = (props) => {
   }, [index, props.group])
 
   const s3 = new AWS.S3({
-    accessKeyId: process.env.ACCESSKEY,
-    secretAccessKey: process.env.SECRETKEY,
+    accessKeyId: process.env.REACT_APP_ACCESS_KEY,
+    secretAccessKey: process.env.REACT_APP_SECRET_KEY,
     region: 'eu-north-1'
   });
-
-  console.log(process.env.ACCESS_KEY)
 
   const s3params = {
     Bucket: 'crackchester',
@@ -60,29 +58,18 @@ const Workshop = (props) => {
 
   // Code for workshop downloads
   const downloadWorkshop = () => {
-    // using Java Script method to get PDF file
-    // fetch(`${props.file}`).then(response => {
-    //     response.blob().then(blob => {
-    //         // Creating new object of PDF file
-    //         const fileURL = window.URL.createObjectURL(blob);
-    //         // Setting various property values
-            // let alink = document.createElement('a');
-            // alink.href = fileURL;
-            // alink.download = `${props.file}`;
-            // alink.click();
-    //     })
-    // })
 
     s3.getObject(s3params, (err, data) => {
       if (err) {
         console.log(err);
       }
-  
-      const content = data.Body;
+
       let alink = document.createElement('a');
-      alink.href = props.file;
+      const blob = new Blob([data.Body], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      alink.href = url;
       alink.target= '_blank';
-      alink.download = content;
+      alink.download = props.file;
       alink.click();
     });
   }
