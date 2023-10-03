@@ -1,9 +1,9 @@
-import Gallery from "./Gallery";
+import Gallery from "../../gallery/Gallery";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
-import WorkshopEdit from '../workshopChanges/WorkshopEdit';
+import WorkshopEdit from './WorkshopEdit';
 import AWS from 'aws-sdk';
 
 const Workshop = (props) => {

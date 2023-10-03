@@ -1,6 +1,6 @@
 import React from 'react';
 import Announcement from './Announcement';
-import './Announcements.scss';
+import '../../announcements/Announcements.scss';
 
 class Announcements extends React.Component {
   constructor(props) {

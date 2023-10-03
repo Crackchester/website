@@ -1,5 +1,5 @@
-import React from 'react'
-import './AnnouncementChanges.scss'
+import React from 'react';
+import '../../announcements/Announcements.scss';
 
 class AnnouncementEdit extends React.Component {
   constructor(props) {

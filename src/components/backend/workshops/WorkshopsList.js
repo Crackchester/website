@@ -1,6 +1,6 @@
 import Workshop from './Workshop';
-import WorkshopAdd from '../workshopChanges/WorkshopAdd';
-import './Workshops.scss';
+import WorkshopAdd from './WorkshopAdd';
+import '../../workshops/Workshops.scss';
 import { useEffect, useState } from "react";
 
 const WorkshopsList = (props) => {

@@ -1,9 +1,9 @@
-import Gallery from "./Gallery";
+import Gallery from "../../gallery/Gallery";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from "react";
-import AnnouncementEdit from '../announcementChanges/AnnouncementEdit';
+import AnnouncementEdit from './AnnouncementEdit';
 
 const Announcement = (props) => {
   const { width } = useWindowDimensions();

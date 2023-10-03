@@ -1,21 +1,13 @@
 import React from 'react'
-import './WorkshopChanges.scss'
+import '../../workshops/Workshops.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-class WorkshopAdd extends React.Component {
+class WorkshopEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      workshop: 
-        {
-          title: "",
-          date: "",
-          images: [],
-          file: "",
-          summary: "",
-          details: ""
-        },
+      workshop: props.data,
       group: props.group,
       isLoading: true
     }
@@ -26,9 +18,8 @@ class WorkshopAdd extends React.Component {
 
   async sendPutRequest() {
     this.setState({isLoading: true});
-    console.log(this.state.group)
-    var group = this.state.group;
-    group.content.push(this.state.workshop);
+    var group = this.state.group
+    group.content[this.props.index] = this.state.workshop
     group.content.sort((a, b) => b.date.localeCompare(a.date));
     const requestOptions = {
       method: 'PUT',
@@ -38,7 +29,8 @@ class WorkshopAdd extends React.Component {
     const url = 'https://ec2.goodey.co.uk:8443/Workshops/' + this.props.group.id;
     const response = await fetch(url, requestOptions);
     const data = await response.json();
-    this.setState({ postId: data.id });
+    this.setState({ putId: data.id });
+    sessionStorage.setItem("scroll", window.scrollY);
     window.location.reload();
   }
 
@@ -88,21 +80,21 @@ class WorkshopAdd extends React.Component {
   render() {
     return <React.Fragment>
       <div className="flex-middle container">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} id='editForm'>
           <label>Title
-            <input type="text" name="title" required minLength={3} maxLength={64} onChange={this.handleChange} />
+            <input type="text" name="title" required minLength={3} maxLength={64} onChange={this.handleChange} value={this.state.workshop.title}/>
           </label>
           <label>Date
-            <input type="text" name="date" required minLength={3} maxLength={128} onChange={this.handleChange} />
+            <input type="text" name="date" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.date}/>
           </label>
           <label>Summary
-            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} />
+            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} value={this.state.workshop.summary}/>
           </label>
           <label>Details
-            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} />
+            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} value={this.state.workshop.details}/>
           </label>
           <label>File
-            <input type="text" name="file" maxLength={128} onChange={this.handleChange} />
+            <input type="text" name="file" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.file}/>
           </label>
           <label>Images
             {
@@ -120,11 +112,11 @@ class WorkshopAdd extends React.Component {
               <h2><FontAwesomeIcon icon={faPlus} /></h2>
             </button>
           </label>
-          <input type="submit" value="Submit Details" className="btn" disabled={this.state.loading} />
+          <input type="submit" value="Submit" className="btn" disabled={this.state.loading} />
         </form>
       </div>
     </React.Fragment>
   }
 }
 
-export default WorkshopAdd;
+export default WorkshopEdit;

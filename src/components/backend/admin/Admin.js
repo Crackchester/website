@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import Spinner from '../../spinner/Spinner';
-import AnnouncementAdd from '../announcementChanges/AnnouncementAdd';
-import Announcements from '../announcementsPreview/Announcements';
-import WorkshopGroupAdd from '../workshopChanges/WorkshopGroupAdd';
-import Workshops from '../workshopsPreview/WorkshopsTitle';
+import AnnouncementAdd from '../announcements/AnnouncementAdd';
+import Announcements from '../announcements/Announcements';
+import WorkshopGroupAdd from '../workshops/WorkshopGroupAdd';
+import Workshops from '../workshops/WorkshopsTitle';
 import './Admin.scss';
 
 const Admin = () => {

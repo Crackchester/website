@@ -1,6 +1,6 @@
-import React from 'react'
-import './AnnouncementChanges.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import '../../announcements/Announcements.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 class AnnouncementAdd extends React.Component {

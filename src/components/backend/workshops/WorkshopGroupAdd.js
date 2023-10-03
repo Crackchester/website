@@ -1,5 +1,5 @@
 import React from 'react'
-import './WorkshopChanges.scss'
+import '../../workshops/Workshops.scss'
 
 class WorkshopAdd extends React.Component {
   constructor(props) {
