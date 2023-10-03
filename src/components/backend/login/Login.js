@@ -40,7 +40,7 @@ class Login extends React.Component {
       data = [this.state.username, sha3_256(this.state.password)];
       this.setState({ login: true, loading: false })
     }else {
-      this.setState({ notify: "Incorrect username or password!" });
+      this.setState({ notify: "Incorrect username or password!", loading: false });
     }
   }
 
@@ -59,7 +59,7 @@ class Login extends React.Component {
         this.setState({ login: true })
         data = [this.state.username, sha3_256(this.state.password)];
       }else {
-        this.setState({ notify: "Incorrect username or password!" });
+        // this.setState({ notify: "Incorrect username or password!" });
       }
       
     }, Math.max(200, Math.floor(Math.random() * 850))); 

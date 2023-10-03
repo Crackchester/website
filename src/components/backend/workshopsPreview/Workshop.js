@@ -29,10 +29,8 @@ const Workshop = (props) => {
   useEffect(() => {
 
     async function sendPutRequest() {
-      console.log(index)
       var group = props.group
       group.content.splice(index,1);
-      console.log(group)
       const requestOptions = {
         method: 'PUT',
         mode: 'cors',

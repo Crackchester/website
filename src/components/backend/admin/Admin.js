@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
+import Spinner from '../../spinner/Spinner';
 import AnnouncementAdd from '../announcementChanges/AnnouncementAdd';
 import Announcements from '../announcementsPreview/Announcements';
 import WorkshopGroupAdd from '../workshopChanges/WorkshopGroupAdd';
@@ -34,14 +35,19 @@ const Admin = () => {
   // Get state from previous page
   const { state } = useLocation();
 
-  // If valid state is not found then return to login
-  if(!state){
-    setLoading(false);
-  }
+  // Save currently viewed section between reloads
+  useEffect(()=>{
+    var activeViewSave = sessionStorage.getItem("section");
+    if (activeViewSave == null) {
+      activeViewSave = access[0];
+    }sessionStorage.setItem("section", activeViewSave);
+    setActiveView(activeViewSave);
+  }, [access]);
 
-  // setTimeout(() => {
-  if(!valid)checkLogin(state.data[0])
-  // }, Math.max(200, Math.floor(Math.random() * 850))); 
+  // If valid state then set to something that will fail on check
+  var username = "fail"
+  if(state != null)username = state.data[0]
+  if(!valid)checkLogin(username)
 
   async function checkLogin(username) {
     const requestOptions = {
@@ -67,17 +73,8 @@ const Admin = () => {
     setLoading(false)
   }
 
-  // Save currently viewed section between reloads
-  useEffect(()=>{
-    var activeViewSave = sessionStorage.getItem("section");
-    if (activeViewSave == null) {
-      activeViewSave = access[0];
-    }sessionStorage.setItem("section", activeViewSave);
-    setActiveView(activeViewSave);
-  }, [access]);
-
   if (loading) {
-    return <p>Loading...</p>;
+    return <Spinner/>
   }
 
   return <React.Fragment>
