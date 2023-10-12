@@ -49,6 +49,7 @@ class AnnouncementAdd extends React.Component {
       this.setState({
         announcement: tAnnouncement
       });
+      console.log(tAnnouncement);
     }
   }
   
@@ -94,10 +95,10 @@ class AnnouncementAdd extends React.Component {
             <input type="text" name="location" required minLength={3} maxLength={128} onChange={this.handleChange} />
           </label>
           <label>Summary
-            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} />
+            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} />
           </label>
           <label>Details
-            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} />
+            <textarea name="details" maxLength={1024} onChange={this.handleChange} />
           </label>
           <label>Images
             {

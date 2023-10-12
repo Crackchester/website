@@ -14,12 +14,21 @@ form {
     margin-bottom: 0.5em;
   }
 
-  input {
+  input, textarea {
     display: block;
     font-size: 1.25em;
     padding: 0.2em;
     margin-bottom: 0.67em;
     margin-top: 0.1em;
+    border-radius: 4px;
+    border: 1px solid darkgray;
+  }
+
+  textarea {
+    width: calc(100% - 10px);
+    height: 2.5em;
+    resize: vertical;
+    max-height: 10em;
   }
 
   .btn {
