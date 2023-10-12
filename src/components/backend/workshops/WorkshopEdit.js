@@ -77,6 +77,13 @@ class WorkshopEdit extends React.Component {
     });
   }
 
+  handleInput = (event) => {
+    const textarea = event.target;
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight - 10 + 'px';
+    this.setState({ textareaValue: textarea.value });
+  };
+
   render() {
     return <React.Fragment>
       <div className="flex-middle container">
@@ -88,15 +95,15 @@ class WorkshopEdit extends React.Component {
             <input type="text" name="date" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.date}/>
           </label>
           <label>Summary
-            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} value={this.state.workshop.summary}/>
+            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} onInput={this.handleInput} value={this.state.workshop.summary}/>
           </label>
           <label>Details
-            <textarea name="details" maxLength={1024} onChange={this.handleChange} value={this.state.workshop.details}/>
+            <textarea name="details" maxLength={1024} onChange={this.handleChange} onInput={this.handleInput} value={this.state.workshop.details}/>
           </label>
           <label>File
             <input type="text" name="file" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.file}/>
           </label>
-          <label class="images-label">Images
+          <label className="images-label">Images
             {
               this.state.workshop.images.map((img, index) => {
                 return <div key={index}>
