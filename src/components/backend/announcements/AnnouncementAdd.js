@@ -49,6 +49,7 @@ class AnnouncementAdd extends React.Component {
       this.setState({
         announcement: tAnnouncement
       });
+      console.log(tAnnouncement);
     }
   }
   
@@ -80,6 +81,13 @@ class AnnouncementAdd extends React.Component {
     });
   }
 
+  handleInput = (event) => {
+    const textarea = event.target;
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight - 10 + 'px';
+    this.setState({ textareaValue: textarea.value });
+  };
+
   render() {
     return <React.Fragment>
       <div className="flex-middle container">
@@ -94,12 +102,12 @@ class AnnouncementAdd extends React.Component {
             <input type="text" name="location" required minLength={3} maxLength={128} onChange={this.handleChange} />
           </label>
           <label>Summary
-            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} />
+            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} onInput={this.handleInput}/>
           </label>
           <label>Details
-            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} />
+            <textarea name="details" maxLength={1024} onChange={this.handleChange} onInput={this.handleInput}/>
           </label>
-          <label>Images
+          <label className="images-label">Images
             {
               this.state.announcement.images.map((img, index) => {
                 return <div key={index}>

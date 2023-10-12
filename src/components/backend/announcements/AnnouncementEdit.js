@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../announcements/Announcements.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 class AnnouncementEdit extends React.Component {
   constructor(props) {
@@ -70,6 +72,13 @@ class AnnouncementEdit extends React.Component {
     });
   }
 
+  handleInput = (event) => {
+    const textarea = event.target;
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight - 10 + 'px';
+    this.setState({ textareaValue: textarea.value });
+  };
+
   render() {
     return <React.Fragment>
       <div className="flex-middle container">
@@ -84,13 +93,26 @@ class AnnouncementEdit extends React.Component {
             <input type="text" name="location" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.announcement.location}/>
           </label>
           <label>Summary
-            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} value={this.state.announcement.summary}/>
+            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} onInput={this.handleInput} value={this.state.announcement.summary}/>
           </label>
           <label>Details
-            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} value={this.state.announcement.details}/>
+            <textarea name="details" maxLength={1024} onChange={this.handleChange} onInput={this.handleInput} value={this.state.announcement.details}/>
           </label>
-          <label>Images
-            <input type="text" name="images" maxLength={1024} onChange={this.handleChange} value={this.state.announcement.images}/>
+          <label className="images-label">Images
+            {
+              this.state.announcement.images.map((img, index) => {
+                return <div key={index}>
+                  <p>{img}</p>
+                  <button className="announcement_item-del" type="button" onClick={()=>{this.removeImage(img)}}>
+                    <h2><FontAwesomeIcon icon={faTrash} /></h2>
+                  </button>
+                </div>
+              })
+            }
+            <input type="text" name="newImage" maxLength={1024} onChange={this.handleChange}/>
+            <button className="announcement_item-add" type="button" onClick={this.addImage}>
+              <h2><FontAwesomeIcon icon={faPlus} /></h2>
+            </button>
           </label>
           <input type="submit" value="Submit" className="btn" disabled={this.state.loading} />
         </form>
