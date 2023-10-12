@@ -96,15 +96,15 @@ class WorkshopAdd extends React.Component {
             <input type="text" name="date" required minLength={3} maxLength={128} onChange={this.handleChange} />
           </label>
           <label>Summary
-            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} />
+            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} />
           </label>
           <label>Details
-            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} />
+            <textarea name="details" maxLength={1024} onChange={this.handleChange} />
           </label>
           <label>File
             <input type="text" name="file" maxLength={128} onChange={this.handleChange} />
           </label>
-          <label>Images
+          <label class="images-label">Images
             {
               this.state.workshop.images.map((img, index) => {
                 return <div key={index}>

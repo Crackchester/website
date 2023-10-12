@@ -17,24 +17,109 @@ form {
   input, textarea {
     display: block;
     font-size: 1.25em;
+    font-family: inherit;
     padding: 0.2em;
-    margin-bottom: 0.67em;
-    margin-top: 0.1em;
-    border-radius: 4px;
-    border: 1px solid darkgray;
+    border-radius: 0;
+    border: none;
+    border-left: 2px solid #F9F7F1;
+    background: transparent;
+    color: #F9F7F1;
+    outline: none;
+  }
+
+  input{
+    margin: -0.3em 0 0 0.4em;
+    flex: 1;
+    padding: 0.2em 0.2em 0.3em 0.4em;
   }
 
   textarea {
     width: calc(100% - 10px);
-    height: 2.5em;
     resize: vertical;
     max-height: 10em;
-    min-height: 2.5em;
+    min-height: 3.7em;
+    margin: 1.4em 0 0 -1.5em;
+    padding: 0.3em 0.2em 0.2em 0.4em;
+  }
+
+  label {
+    display: flex;
+    padding-bottom: 0.3em;
+    padding-top: 0;
+    padding-left: 0.2em;
+    position: relative;
+    margin-bottom: 1.5em;
+  }
+
+  label::before{
+    content: "";
+    position: absolute;
+    top: 1.7em;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F9F7F1;
   }
 
   .btn {
     font-size: 1em;
   }
+
+  // Fixes autofill changing the styles in Chrome based browsers
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: #F9F7F1 !important;
+  }
+
+  // Fixes styling for adding images in the forms
+  .announcement_item-add, .announcement_item-del,
+  .workshop_item-del{
+    max-height: 2.5em;
+    background-color: transparent;
+    color: #F9F7F1;
+    border: none;
+  }
+
+  .announcement_item-add, .workshop_item-del:not(p + .workshop_item-del){
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .announcement_item-add:hover, .announcement_item-del:hover,
+  .workshop_item-del:hover{
+    cursor: pointer;
+  }
+
+  .announcement_item-del{
+    margin-top: 1em;
+  }
+  
+  .images-label{
+    flex-direction: column;
+  }
+
+  .images-label div{
+    display: flex;
+    align-items: center;
+  }
+
+  label div p{
+    margin-block-start: 2em;
+    max-width: 15em;
+    overflow-wrap: break-word;
+  }
+
+  input[name="newImage"]{
+    position: absolute;
+    top: 0;
+    left: 3.2em;
+    width: calc(100% - 6em);
+  }
+
 }
 
 .flex-middle {

@@ -84,12 +84,12 @@ class AnnouncementEdit extends React.Component {
             <input type="text" name="location" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.announcement.location}/>
           </label>
           <label>Summary
-            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} value={this.state.announcement.summary}/>
+            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} value={this.state.announcement.summary}/>
           </label>
           <label>Details
-            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} value={this.state.announcement.details}/>
+            <textarea name="details" maxLength={1024} onChange={this.handleChange} value={this.state.announcement.details}/>
           </label>
-          <label>Images
+          <label class="images-label">Images
             <input type="text" name="images" maxLength={1024} onChange={this.handleChange} value={this.state.announcement.images}/>
           </label>
           <input type="submit" value="Submit" className="btn" disabled={this.state.loading} />

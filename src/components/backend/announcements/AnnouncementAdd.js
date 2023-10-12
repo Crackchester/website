@@ -100,7 +100,7 @@ class AnnouncementAdd extends React.Component {
           <label>Details
             <textarea name="details" maxLength={1024} onChange={this.handleChange} />
           </label>
-          <label>Images
+          <label class="images-label">Images
             {
               this.state.announcement.images.map((img, index) => {
                 return <div key={index}>

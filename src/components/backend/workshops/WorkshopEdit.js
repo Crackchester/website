@@ -88,15 +88,15 @@ class WorkshopEdit extends React.Component {
             <input type="text" name="date" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.date}/>
           </label>
           <label>Summary
-            <input type="text" name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} value={this.state.workshop.summary}/>
+            <textarea name="summary" required minLength={5} maxLength={1024} onChange={this.handleChange} value={this.state.workshop.summary}/>
           </label>
           <label>Details
-            <input type="text" name="details" maxLength={1024} onChange={this.handleChange} value={this.state.workshop.details}/>
+            <textarea name="details" maxLength={1024} onChange={this.handleChange} value={this.state.workshop.details}/>
           </label>
           <label>File
             <input type="text" name="file" required minLength={3} maxLength={128} onChange={this.handleChange} value={this.state.workshop.file}/>
           </label>
-          <label>Images
+          <label class="images-label">Images
             {
               this.state.workshop.images.map((img, index) => {
                 return <div key={index}>
