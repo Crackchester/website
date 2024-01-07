@@ -17,11 +17,11 @@ const Home = () => {
 
   useEffect(() => {
     getWorkshops().then((workshops) => {
-      if (workshops.length == 0) {
+      if (workshops.length === 0) {
         setMostRecentWorkshop("none");
         return;
       }
-      if (workshops[0].content.length == 0) {
+      if (workshops[0].content.length === 0) {
         setMostRecentWorkshop("none");
         return;
       }
@@ -68,7 +68,7 @@ const Home = () => {
       <div className="container">
         <h1>Workshops</h1>
         <div id="home-workshops-content">
-            {mostRecentWorkshop == undefined ? <p>Loading...</p>: mostRecentWorkshop == "none" ? <p>No workshops</p> : <Workshop data={mostRecentWorkshop}/>}
+            {mostRecentWorkshop === undefined ? <p>Loading...</p>: mostRecentWorkshop === "none" ? <p>No workshops</p> : <Workshop data={mostRecentWorkshop}/>}
             <a href='/workshops'>See more</a>
         </div>
       </div>
@@ -94,7 +94,7 @@ const Home = () => {
             </p>
           </div>
           <div id="about-us-images">
-            <img src={`${process.env.PUBLIC_URL}/assets/placeholder.jpg`} alt="About Us Image" className="about-us-image"/>
+            <img src={`${process.env.PUBLIC_URL}/assets/placeholder.jpg`} alt="About Us" className="about-us-image"/>
           </div>
         </div>
       </div>
