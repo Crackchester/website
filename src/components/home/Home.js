@@ -1,11 +1,12 @@
 import Announcements from '../announcements/Announcements';
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import partners from '../partners/partners.json';
 import particles from './particles.json';
 import './Home.scss'
 import Workshop from '../workshops/Workshop';
+import getWorkshops from '../workshops/getWorkshops';
 
 const Home = () => {
   const particlesInit = useCallback(async engine => {
@@ -13,6 +14,20 @@ const Home = () => {
   }, []);
 
   const [mostRecentWorkshop, setMostRecentWorkshop] = useState();
+
+  useEffect(() => {
+    getWorkshops().then((workshops) => {
+      if (workshops.length == 0) {
+        setMostRecentWorkshop("none");
+        return;
+      }
+      if (workshops[0].content.length == 0) {
+        setMostRecentWorkshop("none");
+        return;
+      }
+      setMostRecentWorkshop(workshops[0].content[0]);
+    })
+  }, []);
 
   return <React.Fragment>
     <section id="landing-container">
@@ -50,9 +65,13 @@ const Home = () => {
       </div>
     </section>
     <section id="home-workshops">
-      <h1>Workshops</h1>
-      {mostRecentWorkshop == undefined ? <p>Loading...</p>: <Workshop data={mostRecentWorkshop}/>}
-      <a href='/workshops'>See more</a>
+      <div className="container">
+        <h1>Workshops</h1>
+        <div id="home-workshops-content">
+          {mostRecentWorkshop == undefined ? <p>Loading...</p>: mostRecentWorkshop == "none" ? <p>No workshops</p> : <Workshop data={mostRecentWorkshop}/>}
+          <a href='/workshops'>See more</a>
+        </div>
+      </div>
     </section>
     <section id="about-us">
       <div className="container"> 
