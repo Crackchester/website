@@ -40,6 +40,12 @@ const Home = () => {
         </div>
       </div>
     </section>
+    <section id="events">
+      <div className="container">
+        <h1>Events</h1>
+        <Announcements/>
+      </div>
+    </section>
     <section id="about-us">
       <div className="container"> 
         <h1>About Us</h1>
@@ -56,12 +62,6 @@ const Home = () => {
         Come along.  Have fun.  Go home and practice your skills.  Come back.  Have more fun.  Do cybersecurity.
         Join Hackchester.
         </p>
-      </div>
-    </section>
-    <section id="events">
-      <div className="container">
-        <h1>Events</h1>
-        <Announcements/>
       </div>
     </section>
     <section id="podcast">
