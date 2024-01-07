@@ -6,17 +6,12 @@ const workshopsList = (props) => {
     <div className="workshops">
       {
         props.content.map((data, index) => {
-          return <>
+          return (
             <Workshop
               key={index}
-              title={data.title}
-              date={data.date}
-              details={data.details}
-              images={data.images}
-              summary={data.summary}
-              file={data.file}
+              data={data}
             />
-          </>
+          );
         })
       }
     </div>

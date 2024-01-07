@@ -1,5 +1,5 @@
 import Announcements from '../announcements/Announcements';
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import partners from '../partners/partners.json';
@@ -11,6 +11,8 @@ const Home = () => {
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
   }, []);
+
+  const [mostRecentWorkshop, setMostRecentWorkshop] = useState();
 
   return <React.Fragment>
     <section id="landing-container">
@@ -47,8 +49,10 @@ const Home = () => {
         <Announcements/>
       </div>
     </section>
-    <section id="workshops">
+    <section id="home-workshops">
       <h1>Workshops</h1>
+      {mostRecentWorkshop == undefined ? <p>Loading...</p>: <Workshop data={mostRecentWorkshop}/>}
+      <a href='/workshops'>See more</a>
     </section>
     <section id="about-us">
       <div className="container"> 

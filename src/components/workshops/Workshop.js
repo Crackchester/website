@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 import AWS from 'aws-sdk';
 
-const Workshop = (props) => {
+const Workshop = ({data}) => {
   const { width } = useWindowDimensions();
 
   const s3 = new AWS.S3({
@@ -15,7 +15,7 @@ const Workshop = (props) => {
 
   const s3params = {
     Bucket: 'crackchester',
-    Key: `workshops/${props.file}`
+    Key: `workshops/${data.file}`
   };
 
   // Code for workshop downloads
@@ -31,13 +31,13 @@ const Workshop = (props) => {
       const url = URL.createObjectURL(blob);
       alink.href = url;
       alink.target= '_blank';
-      alink.download = props.file;
+      alink.download = data.file;
       alink.click();
     });
   }
 
   // Code for converting from iso to readable string
-  const d = props.date
+  const d = data.date
 
   var day = d.substring(8)
   if(day[0] === "0"){
@@ -67,16 +67,16 @@ const Workshop = (props) => {
   return (
     <div className="workshop_item">
       <div className="workshop_item-content">
-        <div className="workshop_item-text" style={{width: props.images.length > 0 && width >= 768 ? '75%' : '100%'}}>
+        <div className="workshop_item-text" style={{width: data.images.length > 0 && width >= 768 ? '75%' : '100%'}}>
           <div className="workshop_item-header">
             <time>{date}</time>
-            <h2>{props.title}</h2>
+            <h2>{data.title}</h2>
           </div>
     
-          <sub>{props.summary}</sub>
+          <sub>{data.summary}</sub>
           {
-            typeof(props.details) === "object" ? 
-              props.details.map((item, index) => {
+            typeof(data.details) === "object" ? 
+              data.details.map((item, index) => {
                 return typeof(item) === "object" ? 
                   <ul key={index}>
                     {
@@ -85,7 +85,7 @@ const Workshop = (props) => {
                       })
                     }
                   </ul> : <p key={index}>{item}</p>
-              }) : <p>{props.details}</p>
+              }) : <p>{data.details}</p>
           }
           <button className="workshop_item-btn" onClick={downloadWorkshop}>
             <h2><FontAwesomeIcon icon={faFilePdf} /></h2>Download Workshop
@@ -93,7 +93,7 @@ const Workshop = (props) => {
         </div>
 
         <div className="workshop_item-img">
-          { props.images.length > 0 ? <Gallery images={props.images} /> : null }
+          { data.images.length > 0 ? <Gallery images={data.images} /> : null }
         </div>
       </div>
     </div>
