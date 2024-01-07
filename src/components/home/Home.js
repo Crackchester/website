@@ -61,7 +61,6 @@ const Home = () => {
     <section id="events">
       <div className="container">
         <h1>Events</h1>
-        <p>Find out what we're arranging soon!</p>
         <Announcements/>
       </div>
     </section>
