@@ -5,6 +5,9 @@ const Footer = () => (
     <section>
       <div className="container">
         <p>
+          Contact us at: <a href="mailto:hackchester@manchesterstudentsunion.com">hackchester@manchesterstudentsunion.com</a> or <a href="mailto:hackchestermcr@gmail.com">hackchestermcr@gmail.com</a>
+        </p>
+        <p>
           © 2023 Hackchester
         </p>
         <p>
