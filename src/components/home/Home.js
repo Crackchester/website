@@ -68,8 +68,8 @@ const Home = () => {
       <div className="container">
         <h1>Workshops</h1>
         <div id="home-workshops-content">
-          {mostRecentWorkshop == undefined ? <p>Loading...</p>: mostRecentWorkshop == "none" ? <p>No workshops</p> : <Workshop data={mostRecentWorkshop}/>}
-          <a href='/workshops'>See more</a>
+            {mostRecentWorkshop == undefined ? <p>Loading...</p>: mostRecentWorkshop == "none" ? <p>No workshops</p> : <Workshop data={mostRecentWorkshop}/>}
+            <a href='/workshops'>See more</a>
         </div>
       </div>
     </section>
