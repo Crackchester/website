@@ -67,6 +67,25 @@
   background-color: $color-accent-3-a90;
 }
 
+#about-us-content {
+  display: flex;
+  flex-flow: row;
+}
+
+#about-us-text {
+  flex: 1 1 auto;
+}
+
+#about-us-images {
+  flex: 0 1 auto;
+  width: fit-content;
+  padding: 1.5em;
+}
+
+.about-us-image {
+  width: 25em;
+}
+
 #events {
   background-color: $color-accent-2-a90;
 }
