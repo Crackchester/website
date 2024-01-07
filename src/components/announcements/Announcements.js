@@ -36,7 +36,7 @@ class Announcements extends React.Component {
     return (
       <div className='announcements'>
         {
-          announcements.length == 0 ? <p>Find out what we're arranging soon!</p> : announcements.map((data, index) => {
+          announcements.length === 0 ? <p>Find out what we're arranging soon!</p> : announcements.map((data, index) => {
             return <Announcement 
               key={index}
               title={data.title}
