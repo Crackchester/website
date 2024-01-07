@@ -5,6 +5,7 @@ import { loadFull } from "tsparticles";
 import partners from '../partners/partners.json';
 import particles from './particles.json';
 import './Home.scss'
+import Workshop from '../workshops/Workshop';
 
 const Home = () => {
   const particlesInit = useCallback(async engine => {
@@ -45,6 +46,9 @@ const Home = () => {
         <h1>Events</h1>
         <Announcements/>
       </div>
+    </section>
+    <section id="workshops">
+      <h1>Workshops</h1>
     </section>
     <section id="about-us">
       <div className="container"> 

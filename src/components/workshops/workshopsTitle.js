@@ -3,6 +3,7 @@ import WorkshopsList from './workshopsList';
 import './Workshops.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperclip } from '@fortawesome/free-solid-svg-icons'
+import getWorkshops from './getWorkshops';
 
 class workshopsTitle extends React.Component {
   constructor(props) {
@@ -15,16 +16,9 @@ class workshopsTitle extends React.Component {
 
   async componentDidMount() {
     this.setState({isLoading: true});
-
-    const response = await fetch('https://ec2.goodey.co.uk:8443/Workshops', {
-      method: 'GET',
-      mode: 'cors',
-      headers: {
-        Accept: 'application/json',
-      },
-    });
-    const data = await response.json();
-    this.setState({workshops: data, isLoading: false});
+    // separated this out into getWorkshops.js because I need them on the homepage
+    const workshops = await getWorkshops();
+    this.setState({workshops, isLoading: false});
   }
 
   render() {
