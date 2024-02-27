@@ -93,9 +93,9 @@ const Home = () => {
               Join Hackchester.
             </p>
           </div>
-          <div id="about-us-images">
+          {/* <div id="about-us-images">
             <img src={`${process.env.PUBLIC_URL}/assets/placeholder.jpg`} alt="About Us" className="about-us-image"/>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
@@ -105,7 +105,7 @@ const Home = () => {
         <p>
         A new podcast discussing the latest trends, topic and controversies in the cybersecurity scene.
         </p>
-        <a href="https://open.spotify.com/show/5QCS4Gc6RE5RGWBNSQgHso?si=be927228eb234aa6">
+        <a href="https://open.spotify.com/show/7tfeU4WxVvVjFDok2DUCPO?si=z1PyxJkGS_-vGoUWhhkQwQ">
           <button className="btn">
             Click Here
           </button>

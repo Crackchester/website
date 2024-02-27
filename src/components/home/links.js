@@ -1,7 +1,7 @@
 [
     {
     "name": "Instagram",
-    "img": "bt.svg",
+    "img": "TeachFirst.svg",
     "url": "https://jobs.bt.com/content/Security/"
     }
 ]
