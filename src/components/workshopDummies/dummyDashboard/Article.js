@@ -1,5 +1,5 @@
-import Gallery from "../gallery/Gallery";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import Gallery from "../../gallery/Gallery";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 

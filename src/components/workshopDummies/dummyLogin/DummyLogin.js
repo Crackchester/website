@@ -1,5 +1,5 @@
 import React from 'react';
-import Spinner from '../spinner/Spinner';
+import Spinner from '../../spinner/Spinner';
 import { sha256 } from 'js-sha256';
 import { sha3_256 } from 'js-sha3';
 import './DummyLogin.scss';
