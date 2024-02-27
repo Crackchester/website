@@ -1,14 +1,32 @@
 import Announcements from '../announcements/Announcements';
-import React, { useCallback } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import partners from '../partners/partners.json';
 import particles from './particles.json';
 import './Home.scss'
+import Workshop from '../workshops/Workshop';
+import getWorkshops from '../workshops/getWorkshops';
 
 const Home = () => {
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
+  }, []);
+
+  const [mostRecentWorkshop, setMostRecentWorkshop] = useState();
+
+  useEffect(() => {
+    getWorkshops().then((workshops) => {
+      if (workshops.length === 0) {
+        setMostRecentWorkshop("none");
+        return;
+      }
+      if (workshops[0].content.length === 0) {
+        setMostRecentWorkshop("none");
+        return;
+      }
+      setMostRecentWorkshop(workshops[0].content[0]);
+    })
   }, []);
 
   return <React.Fragment>
@@ -40,29 +58,45 @@ const Home = () => {
         </div>
       </div>
     </section>
-    <section id="about-us">
-      <div className="container"> 
-        <h1>About Us</h1>
-        <p>
-        Hackchester is the University of Manchester's only ethical hacking society.  We hold weekly interactive workshops on
-        cybersecurity techniques every Thursday from 4pm 'til 5pm in Atlas 1, Kilburn Building.  We explore the major
-        technques employed by hackers to atack vulnerable systems, how to go about spotting vulnerabilities in your own system,
-        and how to protect systems against those attacks.  We are the hosts of HackersHub, our very own cybersecurity conference, and we
-        host CTFs too for everyone to dig their teeth into the techniques we cover in the workshops.
-        We've tried to make the society as inclusive as possible.  We welcome anyone with any experience.  You absolutely do not
-        have to be a computer science student to join.  Our workshops start from scratch, and we'll help you at every stage of
-        the process.  
-        
-        Come along.  Have fun.  Go home and practice your skills.  Come back.  Have more fun.  Do cybersecurity.
-        Join Hackchester.
-        </p>
-      </div>
-    </section>
     <section id="events">
       <div className="container">
         <h1>Events</h1>
-        <p>Find out what we're arranging soon!</p>
         <Announcements/>
+      </div>
+    </section>
+    <section id="home-workshops">
+      <div className="container">
+        <h1>Workshops</h1>
+        <div id="home-workshops-content">
+            {mostRecentWorkshop === undefined ? <p>Loading...</p>: mostRecentWorkshop === "none" ? <p>No workshops</p> : <Workshop data={mostRecentWorkshop}/>}
+            <a href='/workshops'>See more</a>
+        </div>
+      </div>
+    </section>
+    <section id="about-us">
+      <div className="container"> 
+        <h1>About Us</h1>
+        <div id="about-us-content">
+          <div id="about-us-text">
+            <p>
+              Hackchester is the University of Manchester's only ethical hacking society.  We hold weekly interactive workshops on
+              cybersecurity techniques every Thursday from 4pm 'til 5pm in Atlas 1, Kilburn Building.  We explore the major
+              technques employed by hackers to atack vulnerable systems, how to go about spotting vulnerabilities in your own system,
+              and how to protect systems against those attacks.  We are the hosts of HackersHub, our very own cybersecurity conference, and we
+              host CTFs too for everyone to dig their teeth into the techniques we cover in the workshops.
+              We've tried to make the society as inclusive as possible.  We welcome anyone with any experience.  You absolutely do not
+              have to be a computer science student to join.  Our workshops start from scratch, and we'll help you at every stage of
+              the process.  
+            </p>
+            <p>
+              Come along.  Have fun.  Go home and practice your skills.  Come back.  Have more fun.  Do cybersecurity.<br />
+              Join Hackchester.
+            </p>
+          </div>
+          <div id="about-us-images">
+            <img src={`${process.env.PUBLIC_URL}/assets/placeholder.jpg`} alt="About Us" className="about-us-image"/>
+          </div>
+        </div>
       </div>
     </section>
     <section id="podcast">
