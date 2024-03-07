@@ -1,28 +1,28 @@
 [
     {
         "title": "New Partnership",
-        "date": "24th February 2023",
+        "date": "24th February 2024",
         "images": ["fakeImg2.jpg", "fakeImg3.jpg"],
         "location": "11th Floor, PINNACLE, 67 Albion St, Leeds LS1 5AA",
         "summary": "We have just announced a new partnership with redteam",
         "details": "Hackchester, a well-known cybersecurity firm, has recently announced its partnership with RedTeam, a rapidly growing company in the same industry. This collaboration is expected to bring significant benefits to both companies, as well as to their clients."
     },{
         "title": "Hackers' Hub",
-        "date": "4th January 2022",
+        "date": "4th January 2023",
         "images": ["fakeImg14.jpg", "fakeImg15.png", "fakeImg16.jpg"],
         "location": "11th Floor, PINNACLE, 67 Albion St, Leeds LS1 5AA",
         "summary": "Our Largest Event Ever",
         "details": "Hackchester, a leading cybersecurity company, recently hosted a conference called 'Hacker's Hub,' which proved to be a huge success with over 10,000 tickets sold. The conference focused on cybersecurity and brought together experts from various fields to share their knowledge and insights on the latest trends, challenges, and solutions in the industry. One of the key highlights of the conference was a six-hour Capture the Flag (CTF) event, which challenged participants to put their cybersecurity skills to the test. This event attracted a lot of attention from the cybersecurity community, and many participants were excited to showcase their abilities and compete against other top-notch professionals in the field. The conference also featured a series of keynote speeches, panel discussions, and workshops that covered a wide range of topics such as cyber threats, data breaches, network security, and more. Speakers from some of the world's leading cybersecurity companies, including IBM, Symantec, and Kaspersky, were present to share their experiences and insights on the latest trends and technologies. The success of the conference can be attributed to Hackchester's commitment to providing a platform for cybersecurity experts to come together and share their knowledge and insights. The company's focus on providing cutting-edge solutions and services to its clients has made it a leading player in the industry, and the Hacker's Hub conference is just another example of their commitment to excellence. The conference was an excellent opportunity for attendees to learn from the best and brightest in the cybersecurity industry, and the CTF event provided a fun and engaging way for participants to test their skills and compete against others. Overall, the Hacker's Hub conference was a great success, and Hackchester is already looking forward to hosting another event in the future."
     },{
         "title": "Hackchester Defends Against DDOS",
-        "date": "15th October 2022",
+        "date": "15th October 2023",
         "images": ["fakeImg6.jpg", "fakeImg7.jpg"],
         "location": "11th Floor, PINNACLE, 67 Albion St, Leeds LS1 5AA",
         "summary": "Hackchester Beats Back a Mass DDOS Attack On Microsoft Servers",
         "details": "Hackchester, a cybersecurity company specializing in protecting against Distributed Denial of Service (DDoS) attacks, has just thwarted a major attack against Microsoft servers. The attack was launched by a group of hackers who had managed to compromise several servers around the world and were using them to launch a massive DDoS attack against Microsoft's servers. DDoS attacks are a type of cyberattack that overwhelm a server with traffic, rendering it inaccessible to legitimate users. This can cause significant disruption and can be used as a tool for extortion, as the attackers can demand payment in exchange for stopping the attack. Hackchester's ceo Nathan Parry told us that their team of cybersecurity experts was alerted to the attack and quickly sprang into action. Using their expertise and specialized tools, they were able to identify the source of the attack and block the traffic before it could overwhelm Microsoft's servers. This successful operation is a testament to Hackchester's expertise and dedication to protecting their clients from cyber threats. DDoS attacks can be incredibly damaging, and it's essential for companies to have robust defenses in place to protect against them."
     },{
         "title": "Celebrating Our Anniversary",
-        "date": "13th June 2022",
+        "date": "13th June 2023",
         "images": ["fakeImg.jpg", "fakeImg10.jpg", "fakeImg9.jpg"],
         "location": "11th Floor, PINNACLE, 67 Albion St, Leeds LS1 5AA",
         "summary": "This past weekend we celebrated our anniversary in style",
@@ -33,7 +33,7 @@
         ]
     },{
         "title": "Surpassing 1,000,000 Users",
-        "date": "3rd May 2022",
+        "date": "3rd May 2023",
         "images": ["fakeImg4.jpg","fakeImg5.jpg"],
         "location": "11th Floor, PINNACLE, 67 Albion St, Leeds LS1 5AA",
         "summary": "Hackchester has just surpassed 1,000,000 users, read more below",
