@@ -5,8 +5,8 @@ import { sha3_256 } from 'js-sha3';
 import './DummyLogin.scss';
 import { Navigate } from "react-router-dom";
 
-const AUTH_USERNAME = "d2653ff7cbb2d8ff129ac27ef5781ce68b2558c41a74af1f2ddca635cbeef07d"
-const AUTH_PASSWORD = "5ba00b46237dcaf3e284a254da1e894c34dee1121fde4a6b2f0cb6887f9962bd"
+const AUTH_USERNAME = "41ba5befd015861c391d3b314ed5420136c108fdc03202c73879604bcb7e97c0"
+const AUTH_PASSWORD = "e775b3400170618c1acfc5534316938714788fad271d1183159b088c96d07f5a"
 
 var data;
 
@@ -48,9 +48,10 @@ class DummyLogin extends React.Component {
       }else {
         this.setState({ notify: "Incorrect username or password!" });
       }
-      // console.log(sha256(this.state.username))
-      // console.log(sha3_256(this.state.password))
-      
+      if(false){
+        console.log(sha256(this.state.username))
+        console.log(sha256(this.state.password))
+      }
     }, Math.max(200, Math.floor(Math.random() * 850))); 
   }
 

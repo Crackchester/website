@@ -5,7 +5,7 @@ const Policies = () => {
   return <React.Fragment>
     <section id="policies-container">
       <div id="policies">
-        <h2>CRACKCHESTER</h2>
+        <h2>HACKCHESTER</h2>
         <p><span>Based In Manchester</span><br/>Cyber Security Solutions</p>
       </div>
     </section>
@@ -15,8 +15,7 @@ const Policies = () => {
         <p>System Must Be Kept Secure At All Times</p>
         <p>Passwords May Be Given By Support</p>
         <p>Passwords Will Only Be Given If The Security Questions Are Answered</p>
-        <p>Username Must Always Be First Name Of User</p>
-        <p>Passwords Will Always Default To 1234</p>
+        <p>Username Must Always Be First Letter of First Name Followed By Last Name @ Hackchester e.g. jsmith@hackchester</p>
       </div>
     </section>
   </React.Fragment>

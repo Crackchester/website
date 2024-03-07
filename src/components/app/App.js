@@ -11,6 +11,7 @@ import Login from '../backend/login/Login';
 import Dashboard from '../workshopDummies/dummyDashboard/Dashboard';
 import DummyLogin from '../workshopDummies/dummyLogin/DummyLogin';
 import Policies from '../workshopDummies/dummyPolicies/Policies';
+import Win from '../workshopDummies/dummyWin/Win';
 
 function App() {
   return (
@@ -24,11 +25,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/partners" element={<Partners />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/loginActual" element={<Login />} />
             <Route path="/adminActual" element={<Admin />} />
             <Route path="/admin" element={<DummyLogin />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/policies" element={<Policies />} />
+            <Route path="/win" element={<Win />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

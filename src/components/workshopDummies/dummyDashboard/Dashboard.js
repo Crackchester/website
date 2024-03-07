@@ -7,7 +7,7 @@ const Dashboard = () => {
   return <React.Fragment>
     <section id="dashboard-container">
       <div id="dashboard">
-        <h3>CRACKCHESTER</h3>
+        <h3>HACKCHESTER</h3>
         <p>Cyber Security Solutions</p><br/>
         <svg className="logo" height={"10vh"} viewBox="0 0 434 601">
           <polygon points="228.5,0.6 227.9,136.5 314.1,222.5 229,388 230.6,593.8 434,202.8 "/>
@@ -18,7 +18,7 @@ const Dashboard = () => {
     <section id="about-us">
       <div className="container">
         <h2>Company Policies</h2>
-        <p>Policies Have Been Moved To crackchester.cc/policies</p>
+        <p>Policies Have Been Moved To hackchester.org/policies</p>
       </div>
     </section>
     <section id="events">
