@@ -62,7 +62,7 @@ class DummyLogin extends React.Component {
     return (
       <React.Fragment>
         {this.state.win && (
-          <Navigate to='/win' state={{ data }} replace={true} />
+          <Navigate to='/winButNotHere' state={{ data }} replace={true} />
         )}
         <section id="dummyLogin">
           <div className="container">

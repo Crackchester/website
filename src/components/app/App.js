@@ -30,7 +30,7 @@ function App() {
             <Route path="/admin" element={<DummyLogin />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/policies" element={<Policies />} />
-            <Route path="/win" element={<Win />} />
+            <Route path="/winButNotHere" element={<Win />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
