@@ -49,9 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Simulate login prompt interaction
         await simulateLogin();
 
-        // Hide the loading screen and show the homepage after the boot sequence
-        loadingScreen.style.display = 'none';
-        homepage.style.display = 'block';
     }
 
     // Simulate typing the username and password
@@ -72,14 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 bootText.innerHTML += "Password: ";
                 bootText.innerHTML += `<span class="cursor"></span>`; // Add cursor for password input
 
-                setTimeout(() => {
-                    bootText.innerHTML += "password\n"; // Password entry
-                    bootText.innerHTML += "Access granted.\n";
+                setTimeout(async () => {
+                    bootText.innerHTML += "\nAccess granted.\n";
                     bootText.innerHTML += "Starting homepage...\n";
 
+                    // Wait and redirect to homepage
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                    window.location.pathname = '/home.html'; 
                     resolve();
                 }, 1500); // Password delay
             }, 150); // Username typing delay
+
         });
     }
 
