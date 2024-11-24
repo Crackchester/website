@@ -110,41 +110,56 @@ html {
 }
 
 
-/* About Us Section Styling */
-.about-us {
+/* Section Styling */
+.section {
     padding: 40px 20px;
     background-color: #0a0a0a;
     color: white;
     text-align: center;
 }
 
-.about-title {
+.section-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.about-content {
+.section-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.about-content p {
+.section-content p {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-/* Make sure the About section looks good on smaller screens */
+.section-content a {
+    color: white;
+}
+
+/* Make sure the section looks good on smaller screens */
 @media (max-width: 768px) {
-    .about-title {
+    .section-title {
         font-size: 28px;
     }
 
-    .about-content p {
+    .section-content p {
         font-size: 16px;
     }
+}
+
+/* socials icons */
+.icons {
+    justify-content: center;
+}
+
+.icons img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
 }
 
 /* Footer Styling */

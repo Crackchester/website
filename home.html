@@ -21,7 +21,7 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#events">Events</a>
-            <a href="#contact">Contact</a>
+            <a href="#socials">Socials</a>
         </div>
     </nav>
 
@@ -38,9 +38,9 @@
     <div id="particles-js"></div>
 
     <!-- About Us Section -->
-    <section class="about-us" id="about">
-        <h2 class="about-title">About Us</h2>
-        <div class="about-content">
+    <section class="section" id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="section-content">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, magna vel tempor pretium, eros
                 turpis volutpat nunc, eu laoreet felis magna sed nisi. Vivamus interdum orci a risus gravida, eget
@@ -57,54 +57,47 @@
         </div>
     </section>
 
+    <!-- Events Section -->
+    <section class="section" id="events">
+        <h2 class="section-title">Events</h2>
+        <div class="section-content">
+            <p>
+                We hold in person meetings every Wednesday from 5pm to 6pm in room Kilburn G41.
+            </p>
+            <p>
+                Curabitur vel felis nisi. Nulla ut orci sit amet libero posuere fermentum. Proin sed urna justo. Aenean
+                eleifend, felis non rhoncus iaculis, sem purus fringilla augue, ac pretium lorem lorem vel ligula.
+                Phasellus eu arcu eget lorem maximus accumsan. Vivamus tristique feugiat velit, id convallis libero
+                dictum vitae. Integer maximus orci at justo dignissim, sed tincidunt velit condimentum.
+            </p>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section class="section" id="socials">
+        <h2 class="section-title">Socials</h2>
+        <div class="section-content">
+            <p>
+                Join our Discord server, find useful resources, great opportunities, and learn about upcoming events.
+                Follow us on social media to keep up to date with Hackchester activities.
+            </p>
+            <div class="icons">
+                <a href="https://discord.gg/XNmAqrre3e"  target="_blank"><img src="assets/img/Discord.svg" alt="Discord Server"></a>
+                <a href="https://www.instagram.com/hackchester?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="  target="_blank"><img src="assets/img/Instagram.svg" alt="Instagram"></a>
+                <a href="https://uk.linkedin.com/company/hackchester"  target="_blank"><img src="assets/img/LinkedIn.png" alt="LinkedIn"></a>
+            </div>
+            <p>Check out our <a href="https://manchesterstudentsunion.com/activities/view/hackchester" target="_blank">Student's Union Page.</a></p>
+        </div>
+    </section>
+
+
     <!-- Simple Footer Section -->
     <footer class="footer">
         <p>&copy; 2024 Hackchester. All Rights Reserved.</p>
     </footer>
 
     <!-- Scripts -->
-    <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 100,
-                    density: { enable: true, value_area: 800 }
-                },
-                shape: {
-                    type: 'circle',
-                    stroke: { width: 0, color: '#000000' }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: true,
-                    anim: { enable: true, speed: 1, opacity_min: 0.1 }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: { enable: false }
-                },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: { enable: false }
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: { enable: false, mode: 'repulse' }, // Disable hover interaction
-                    onclick: { enable: false, mode: 'push' } // Disable click interaction
-                }
-            },
-            retina_detect: true
-        });
-    </script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
