@@ -23,10 +23,27 @@ html {
     /* Reduced padding for a cleaner look */
     background-color: #33333385;
     color: white;
-    position: relative;
+    position: fixed;
+    width: 100%;
     /* Ensure navbar is above particles */
     z-index: 10;
     /* Ensure navbar appears above the particles background */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
 }
 
 /* Left section (Logo + Title) */
@@ -146,8 +163,55 @@ html {
         font-size: 28px;
     }
 
+    .company-name {
+        font-size: 40px;
+    }
+
+    .company-tagline {
+        font-size: 12px;
+    }
+
     .section-content p {
         font-size: 16px;
+    }
+
+    .navbar-right {
+        display: none;
+        flex-direction: column;
+        background-color: #33333385;
+        position: absolute;
+        top: 60px; /* Space below the hamburger */
+        right: 10px; /* Align to the right */
+        width: auto; /* Let it size to the content */
+        min-width: 110px; /* Minimum width to avoid it getting too small */
+        padding: 5px;
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px); /* Smooth slide-in effect */
+        transition: all 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .navbar-right.active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Slide in */
+    }
+
+    .navbar-right a {
+        padding: 10px;
+        text-align: left; /* Align text to the left */
+        border-bottom: 1px solid #444; /* Subtle separator */
+    }
+
+    .navbar-right a:last-child {
+        border-bottom: none; /* Remove the last border */
+    }
+
+    .hamburger {
+        display: flex;
     }
 }
 
