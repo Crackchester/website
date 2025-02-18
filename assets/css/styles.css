@@ -23,8 +23,7 @@ html {
     /* Reduced padding for a cleaner look */
     background-color: #33333385;
     color: white;
-    position: fixed;
-    width: 100%;
+    position: relative;
     /* Ensure navbar is above particles */
     z-index: 10;
     /* Ensure navbar appears above the particles background */
@@ -158,7 +157,7 @@ html {
 }
 
 /* Make sure the section looks good on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .section-title {
         font-size: 28px;
     }
@@ -168,7 +167,7 @@ html {
     }
 
     .company-tagline {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .section-content p {
