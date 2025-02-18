@@ -23,7 +23,8 @@ html {
     /* Reduced padding for a cleaner look */
     background-color: #33333385;
     color: white;
-    position: relative;
+    position: fixed;
+    width: 100%;
     /* Ensure navbar is above particles */
     z-index: 10;
     /* Ensure navbar appears above the particles background */
